@@ -1,0 +1,31 @@
+{
+  "pluginType": "video_source_plugin_pack",
+  "id": "phimai_youtube_pack",
+  "name": "Xem Phim AI Youtube",
+  "version": "2.0.0",
+  "description": "Gói plugin rời xem phim AI, hoạt hình 3D, anime và video review truyện từ YouTube (nạp từ Kho Git bên ngoài).",
+  "channels": [
+    {
+      "id": "plugin_ytb_nautrang79",
+      "name": "Nâu Review Phim (@nautrang79)",
+      "channelUrl": "https://www.youtube.com/@nautrang79",
+      "defaultGenres": [
+        "Xuyên không",
+        "Hệ thống",
+        "Cổ đại"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "plugin_ytb_motgautv",
+      "name": "Mọt Gấu TV (@MotGauTV)",
+      "channelUrl": "https://www.youtube.com/@MotGauTV",
+      "defaultGenres": [
+        "Đô thị",
+        "Nghịch tập",
+        "Làm giàu"
+      ],
+      "enabled": true
+    }
+  ]
+}

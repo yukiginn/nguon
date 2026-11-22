@@ -1,0 +1,69 @@
+{
+  "id": "tangthuvien_vi",
+  "name": "Tàng Thư Viện (TangThuVien)",
+  "version": "2.0.0",
+  "author": "Cộng Đồng Plugin",
+  "description": "Kho truyện Tiên Hiệp, Huyền Huyễn, Ngôn Tình convert & dịch lâu đời nổi tiếng tại Việt Nam.",
+  "driver": "generic",
+  "language": "vi",
+  "isChineseSource": false,
+  "baseUrl": "https://truyen.tangthuvien.vn",
+  "mirrorUrls": [
+    "https://tangthuvien.net",
+    "https://m.tangthuvien.vn"
+  ],
+  "charset": "UTF-8",
+  "convertTraditionalToSimplified": false,
+  "searchMethod": "GET",
+  "searchBodyTemplate": "",
+  "requestDelayMs": 250,
+  "customHeaders": {
+    "Accept-Language": "vi-VN,vi;q=0.9,en;q=0.8"
+  },
+  "authConfig": {
+    "supportsLogin": false,
+    "loginUrl": "https://truyen.tangthuvien.vn/",
+    "loginHint": "Tàng Thư Viện cho đọc miễn phí, không yêu cầu đăng nhập.",
+    "authCookieKeys": [],
+    "lockedChapterMarkers": [],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "categories": [
+    { "id": "hot", "name": "Truyện Mới Cập Nhật", "urlPath": "tong-hop?ord=new" },
+    { "id": "tienhiep", "name": "Tiên Hiệp", "urlPath": "the-loai/tien-hiep" },
+    { "id": "huyenhuyen", "name": "Huyền Huyễn", "urlPath": "the-loai/huyen-huyen" },
+    { "id": "dothi", "name": "Đô Thị", "urlPath": "the-loai/do-thi" },
+    { "id": "ngontinh", "name": "Ngôn Tình", "urlPath": "the-loai/ngon-tinh" },
+    { "id": "khoahuyen", "name": "Khoa Huyễn", "urlPath": "the-loai/khoa-huyen" },
+    { "id": "hoanthanh", "name": "Đã Hoàn Thành", "urlPath": "tong-hop?fns=ht" }
+  ],
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPageUrlTemplate": "{categoryUrl}&page={page}",
+    "searchUrlTemplate": "{baseUrl}/ket-qua-tim-kiem?term={query}&page={page}",
+    "listItemSelector": ".book-img-text ul li, .rank-view-list ul li",
+    "listTitleSelector": ".book-mid-info h4 a, h4 a",
+    "listAuthorSelector": ".book-mid-info .author a.name, .author a",
+    "listCoverSelector": ".book-img-box img, img",
+    "listLatestChapterSelector": ".book-mid-info .update a",
+    "detailTitleSelector": ".book-info h1, h1",
+    "detailAuthorSelector": "#authorId p, .book-info .tag a.blue, .author a",
+    "detailCoverSelector": ".book-img img, meta[property='og:image']",
+    "detailDescriptionSelector": ".book-intro p, .book-intro",
+    "detailStatusSelector": ".book-info .tag span.blue",
+    "detailGenreSelector": ".book-info .tag a.red",
+    "detailChapterListUrlSelector": "",
+    "chapterListSelector": "ul.cf li a, .volume-wrap ul li a",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}",
+    "chapterTitleSelector": ".chapter-c-content h2, .content h2, h2, h1",
+    "chapterContentSelector": ".box-chap, .chapter-c-content, #chapter-c",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": "script, style, noscript, iframe, .ads, .chapter-nav, div[class*='ad']",
+    "prevChapterSelector": "a.bot-prev_chap, a:contains(Chương trước)",
+    "nextChapterSelector": "a.bot-next_chap, a:contains(Chương sau)"
+  },
+  "cleanRules": [
+    { "pattern": "tangthuvien\\.vn|tangthuvien\\.net", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ]
+}

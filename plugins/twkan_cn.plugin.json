@@ -1,0 +1,70 @@
+{
+  "id": "twkan_cn",
+  "name": "Đài Loan Khán Thư (Twkan)",
+  "version": "2.0.0",
+  "author": "Cộng Đồng Plugin",
+  "description": "Kho truyện Trung Phồn Thể chất lượng cao, tự động chuẩn hóa Phồn sang Giản trước khi dịch VietPhrase.",
+  "driver": "generic",
+  "language": "zh-TW",
+  "isChineseSource": true,
+  "baseUrl": "https://twkan.com",
+  "mirrorUrls": [
+    "https://www.twkan.com",
+    "https://twkanshu.com"
+  ],
+  "charset": "UTF-8",
+  "convertTraditionalToSimplified": true,
+  "searchMethod": "POST",
+  "searchBodyTemplate": "searchkey={query}&searchtype=all",
+  "requestDelayMs": 350,
+  "customHeaders": {
+    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8"
+  },
+  "authConfig": {
+    "supportsLogin": false,
+    "loginUrl": "https://twkan.com/",
+    "loginHint": "Nguồn đọc miễn phí; nếu gặp xác minh chống bot hãy dùng nút Xác minh trình duyệt.",
+    "authCookieKeys": ["cf_clearance"],
+    "lockedChapterMarkers": [],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "categories": [
+    { "id": "all", "name": "Bảng Xếp Hạng Tổng", "urlPath": "novels/newhot_0_0_1.html" },
+    { "id": "xuanhuan", "name": "Huyền Huyễn", "urlPath": "novels/class/1.htm" },
+    { "id": "xianxia", "name": "Tiên Hiệp", "urlPath": "novels/class/2.htm" },
+    { "id": "dushi", "name": "Đô Thị", "urlPath": "novels/class/3.htm" },
+    { "id": "yanqing", "name": "Ngôn Tình", "urlPath": "novels/class/4.htm" },
+    { "id": "lishi", "name": "Lịch Sử", "urlPath": "novels/class/5.htm" },
+    { "id": "full", "name": "Hoàn Thành", "urlPath": "novels/full/0/1.htm" }
+  ],
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPageUrlTemplate": "{baseUrl}/novels/newhot_0_0_{page}.html",
+    "searchUrlTemplate": "{baseUrl}/search.html",
+    "listItemSelector": "ul#article_list_content li, .newbox ul li",
+    "listTitleSelector": ".newnav h3 a:last-child, h3 a",
+    "listAuthorSelector": ".labelbox label:first-child, .author",
+    "listCoverSelector": "img[data-src], img",
+    "listLatestChapterSelector": ".zxzj p a, .zxzj a",
+    "detailTitleSelector": ".booknav2 h1 a, .booknav2 h1, h1",
+    "detailAuthorSelector": ".booknav2 p a[href*='author'], .booknav2 p:first-of-type a",
+    "detailCoverSelector": ".bookimg2 img, meta[property='og:image']",
+    "detailDescriptionSelector": ".navtxt p, .navtxt",
+    "detailStatusSelector": ".booknav2 p",
+    "detailGenreSelector": ".booknav2 p a[href*='class']",
+    "detailChapterListUrlSelector": ".bookbtn a[href*='/book/'], a.more-btn, a:contains(完整目錄)",
+    "chapterListSelector": "#catalog ul li a, .catalog ul li a",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}",
+    "chapterTitleSelector": "h1.hide720, .txtnav h1, h1",
+    "chapterContentSelector": ".txtnav, #txtnav, #txtcontent0",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": "script, style, noscript, iframe, .txtinfo, .hide720, .bottom-ad, .page1, div[id*='ad']",
+    "prevChapterSelector": ".page1 a:contains(上一章), a:contains(上一章)",
+    "nextChapterSelector": ".page1 a:contains(下一章), a:contains(下一章)"
+  },
+  "cleanRules": [
+    { "pattern": "\\(本章完\\)", "replacement": "", "isRegex": true, "ignoreCase": true },
+    { "pattern": "台灣小說網|twkan\\.com", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ]
+}

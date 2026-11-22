@@ -1,0 +1,71 @@
+{
+  "id": "truyenfull_vi",
+  "name": "Truyện Full (v2)",
+  "version": "2.1.0",
+  "author": "Cộng Đồng Plugin",
+  "description": "Nguồn truyện Việt miễn phí phổ biến nhất, phiên bản v2 hỗ trợ tên miền dự phòng khi nhà mạng chặn.",
+  "driver": "truyenfull",
+  "language": "vi",
+  "isChineseSource": false,
+  "baseUrl": "https://truyenfull.vision",
+  "mirrorUrls": [
+    "https://truyenfull.io",
+    "https://truyenfull.vn",
+    "https://truyenfull.com"
+  ],
+  "charset": "UTF-8",
+  "convertTraditionalToSimplified": false,
+  "searchMethod": "GET",
+  "searchBodyTemplate": "",
+  "requestDelayMs": 200,
+  "customHeaders": {
+    "Accept-Language": "vi-VN,vi;q=0.9"
+  },
+  "authConfig": {
+    "supportsLogin": false,
+    "loginUrl": "https://truyenfull.vision/",
+    "loginHint": "Nguồn đọc miễn phí, không cần tài khoản.",
+    "authCookieKeys": ["cf_clearance"],
+    "lockedChapterMarkers": [],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "categories": [
+    { "id": "hot", "name": "Truyện Hot", "urlPath": "danh-sach/truyen-hot" },
+    { "id": "moi", "name": "Truyện Mới", "urlPath": "danh-sach/truyen-moi" },
+    { "id": "full", "name": "Truyện Full", "urlPath": "danh-sach/truyen-full" },
+    { "id": "tienhiep", "name": "Tiên Hiệp", "urlPath": "the-loai/tien-hiep" },
+    { "id": "ngontinh", "name": "Ngôn Tình", "urlPath": "the-loai/ngon-tinh" },
+    { "id": "kiemhiep", "name": "Kiếm Hiệp", "urlPath": "the-loai/kiem-hiep" },
+    { "id": "huyenhuyen", "name": "Huyền Huyễn", "urlPath": "the-loai/huyen-huyen" },
+    { "id": "dothi", "name": "Đô Thị", "urlPath": "the-loai/do-thi" }
+  ],
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}/",
+    "listPageUrlTemplate": "{categoryUrl}/trang-{page}/",
+    "searchUrlTemplate": "{baseUrl}/tim-kiem/?tukhoa={query}&page={page}",
+    "listItemSelector": ".list-truyen .row, .list-truyen [itemscope]",
+    "listTitleSelector": ".truyen-title a, h3 a",
+    "listAuthorSelector": ".author, [itemprop='author']",
+    "listCoverSelector": "[data-desk-image], [data-image], img",
+    "listLatestChapterSelector": ".text-info a",
+    "detailTitleSelector": "h3.title, h1.title",
+    "detailAuthorSelector": ".info a[itemprop='author']",
+    "detailCoverSelector": "div.book img, meta[property='og:image']",
+    "detailDescriptionSelector": "div.desc-text, [itemprop='description']",
+    "detailStatusSelector": ".info span.text-primary, .info span.text-success",
+    "detailGenreSelector": ".info a[itemprop='genre']",
+    "detailChapterListUrlSelector": "",
+    "chapterListSelector": "#list-chapter ul.list-chapter li a, ul.list-chapter li a",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}/trang-{page}/#list-chapter",
+    "chapterTitleSelector": "a.chapter-title, h2.chapter-title",
+    "chapterContentSelector": "div#chapter-c, .chapter-c",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": "noscript, script, style, iframe, .ads, div.ads-responsive, div[id*='ads']",
+    "prevChapterSelector": "a#prev_chap, a[rel='prev']",
+    "nextChapterSelector": "a#next_chap, a[rel='next']"
+  },
+  "cleanRules": [
+    { "pattern": "truyenfull\\.(vision|io|vn|com)", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ]
+}

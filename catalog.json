@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "name": "Kho Nguồn Truyện Cộng Đồng (Việt & Trung)",
+  "description": "Kho plugin nguồn truyện rời chuẩn Manifest v2 hỗ trợ đăng nhập tài khoản WebView/Cookie, tên miền dự phòng và bộ lọc chống chặn mạng.",
+  "updatedAt": "2026-11-22",
+  "plugins": [
+    {
+      "id": "69shuba_cn",
+      "name": "69 Thư Ba (69shuba)",
+      "version": "2.0.0",
+      "language": "zh",
+      "isChineseSource": true,
+      "baseUrl": "https://www.69shuba.com",
+      "description": "Nguồn Trung tốc độ nhanh, cập nhật sát tác giả, hỗ trợ bảng mã GBK và tự động dịch Việt ngữ.",
+      "file": "plugins/69shuba_cn.plugin.json"
+    },
+    {
+      "id": "piaotia_cn",
+      "name": "Phiêu Thiên Văn Học (Piaotia)",
+      "version": "2.0.0",
+      "language": "zh",
+      "isChineseSource": true,
+      "baseUrl": "https://www.piaotia.com",
+      "description": "Nguồn Trung lâu đời ít quảng cáo, mạnh về Tiên Hiệp, Huyền Huyễn và Ngôn Tình, hỗ trợ GBK.",
+      "file": "plugins/piaotia_cn.plugin.json"
+    },
+    {
+      "id": "twkan_cn",
+      "name": "Đài Loan Khán Thư (Twkan)",
+      "version": "2.0.0",
+      "language": "zh-TW",
+      "isChineseSource": true,
+      "baseUrl": "https://twkan.com",
+      "description": "Kho truyện Trung Phồn Thể đầy đủ, tự động chuyển Phồn sang Giản trước khi dịch VietPhrase.",
+      "file": "plugins/twkan_cn.plugin.json"
+    },
+    {
+      "id": "uukanshu_cn",
+      "name": "UU Khán Thư (UUKanshu)",
+      "version": "2.0.0",
+      "language": "zh",
+      "isChineseSource": true,
+      "baseUrl": "https://uukanshu.cc",
+      "description": "Kho truyện Trung miễn phí phong phú, sạch chữ, hỗ trợ nhiều tên miền dự phòng.",
+      "file": "plugins/uukanshu_cn.plugin.json"
+    },
+    {
+      "id": "shuhaige_cn",
+      "name": "Thư Hải Các (Shuhaige)",
+      "version": "2.0.0",
+      "language": "zh",
+      "isChineseSource": true,
+      "baseUrl": "https://m.shuhaige.net",
+      "description": "Nguồn Trung bản di động load cực nhanh, tự động ghép các trang chương bị chia nhỏ.",
+      "file": "plugins/shuhaige_cn.plugin.json"
+    },
+    {
+      "id": "biquge_cn",
+      "name": "Bút Thú Các (Biquge)",
+      "version": "2.0.0",
+      "language": "zh",
+      "isChineseSource": true,
+      "baseUrl": "https://www.biquge.co",
+      "description": "Hệ thống nguồn Trung miễn phí kinh điển với nhiều tên miền dự phòng dễ chuyển đổi.",
+      "file": "plugins/biquge_cn.plugin.json"
+    },
+    {
+      "id": "fanqie_cn",
+      "name": "Cà Chua Tiểu Thuyết (Fanqie)",
+      "version": "2.0.0",
+      "language": "zh",
+      "isChineseSource": true,
+      "baseUrl": "https://fanqienovel.com",
+      "description": "Nguồn Cà Chua (番茄小说) hỗ trợ đăng nhập tài khoản WebView & dán Cookie để đọc chương yêu cầu đăng nhập.",
+      "file": "plugins/fanqie_cn.plugin.json"
+    },
+    {
+      "id": "qimao_qidian_cn",
+      "name": "Thất Miêu & Khởi Điểm (Qimao/Qidian)",
+      "version": "2.0.0",
+      "language": "zh",
+      "isChineseSource": true,
+      "baseUrl": "https://www.qimao.com",
+      "description": "Nguồn chính thống Thất Miêu & Khởi Điểm, hỗ trợ đăng nhập tài khoản cá nhân để đọc chương VIP đã mua.",
+      "file": "plugins/qimao_qidian_cn.plugin.json"
+    },
+    {
+      "id": "tangthuvien_vi",
+      "name": "Tàng Thư Viện (TangThuVien)",
+      "version": "2.0.0",
+      "language": "vi",
+      "isChineseSource": false,
+      "baseUrl": "https://truyen.tangthuvien.vn",
+      "description": "Kho truyện tiên hiệp, kiếm hiệp, ngôn tình convert & dịch lâu đời nổi tiếng tại Việt Nam.",
+      "file": "plugins/tangthuvien_vi.plugin.json"
+    },
+    {
+      "id": "sangtacviet_vi",
+      "name": "Sáng Tác Việt (SangTacViet)",
+      "version": "2.0.0",
+      "language": "vi",
+      "isChineseSource": false,
+      "baseUrl": "https://sangtacviet.vip",
+      "description": "Nguồn tổng hợp & dịch nhanh nổi tiếng, hỗ trợ đăng nhập tài khoản cá nhân và đổi tên miền dự phòng.",
+      "file": "plugins/sangtacviet_vi.plugin.json"
+    },
+    {
+      "id": "truyenchu_sstruyen_vi",
+      "name": "Truyện Chữ & SSTruyen",
+      "version": "2.0.0",
+      "language": "vi",
+      "isChineseSource": false,
+      "baseUrl": "https://truyenchu.vn",
+      "description": "Nguồn truyện chữ Việt miễn phí đa thể loại, tốc độ cao, kèm tên miền dự phòng SSTruyen.",
+      "file": "plugins/truyenchu_sstruyen_vi.plugin.json"
+    },
+    {
+      "id": "truyenfull_vi",
+      "name": "Truyện Full (v2)",
+      "version": "2.1.0",
+      "language": "vi",
+      "isChineseSource": false,
+      "baseUrl": "https://truyenfull.vision",
+      "description": "Nguồn truyện Việt miễn phí phổ biến nhất, đã nâng cấp hỗ trợ danh sách tên miền dự phòng.",
+      "file": "plugins/truyenfull_vi.plugin.json"
+    },
+    {
+      "id": "metruyenchu_vi",
+      "name": "Mê Truyện Chữ (VIP & Free)",
+      "version": "2.1.0",
+      "language": "vi",
+      "isChineseSource": false,
+      "baseUrl": "https://metruyencv.com",
+      "description": "Kho truyện chất lượng cao, hỗ trợ đăng nhập tài khoản WebView / Cookie để đọc chương VIP đã mở khóa.",
+      "file": "plugins/metruyenchu_vi.plugin.json"
+    },
+    {
+      "id": "wikidich_dtruyen_vi",
+      "name": "WikiDịch & Dtruyen (v2)",
+      "version": "2.1.0",
+      "language": "vi",
+      "isChineseSource": false,
+      "baseUrl": "https://truyenwikidich.net",
+      "description": "Nguồn WikiDịch & Dtruyen chuyên Ngôn Tình, Đam Mỹ, Tiên Hiệp, hỗ trợ đăng nhập WebView và Cookie.",
+      "file": "plugins/wikidich_dtruyen_vi.plugin.json"
+    }
+  ]
+}

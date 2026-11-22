@@ -1,0 +1,73 @@
+{
+  "id": "69shuba_cn",
+  "name": "69 Thư Ba (69shuba)",
+  "version": "2.0.0",
+  "author": "Cộng Đồng Plugin",
+  "description": "Nguồn Trung tốc độ cao, cập nhật sát tác giả, hỗ trợ bảng mã GBK, tìm kiếm POST và tự động dịch Việt ngữ.",
+  "driver": "generic",
+  "language": "zh",
+  "isChineseSource": true,
+  "baseUrl": "https://www.69shuba.com",
+  "mirrorUrls": [
+    "https://www.69shuba.cx",
+    "https://www.69shuba.pro",
+    "https://www.69xinshu.com"
+  ],
+  "charset": "GBK",
+  "convertTraditionalToSimplified": false,
+  "searchMethod": "POST",
+  "searchBodyTemplate": "searchkey={query}&searchtype=all",
+  "requestDelayMs": 350,
+  "customHeaders": {
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"
+  },
+  "authConfig": {
+    "supportsLogin": false,
+    "loginUrl": "https://www.69shuba.com/",
+    "loginHint": "Trang 69shuba miễn phí hoàn toàn; nếu gặp kiểm tra trình duyệt hãy bấm Xác minh trình duyệt.",
+    "authCookieKeys": ["cf_clearance"],
+    "lockedChapterMarkers": [],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "categories": [
+    { "id": "all", "name": "Tổng Hợp Mới Cập Nhật", "urlPath": "novels/lastupdate_1.html" },
+    { "id": "xuanhuan", "name": "Huyền Huyễn", "urlPath": "novels/class/1.htm" },
+    { "id": "xianxia", "name": "Tiên Hiệp", "urlPath": "novels/class/2.htm" },
+    { "id": "dushi", "name": "Đô Thị", "urlPath": "novels/class/3.htm" },
+    { "id": "yanqing", "name": "Ngôn Tình Cổ Đại", "urlPath": "novels/class/4.htm" },
+    { "id": "lishi", "name": "Lịch Sử Quân Sự", "urlPath": "novels/class/5.htm" },
+    { "id": "kehuan", "name": "Khoa Huyễn Linh Dị", "urlPath": "novels/class/6.htm" },
+    { "id": "full", "name": "Truyện Hoàn Thành", "urlPath": "novels/full/0/1.htm" }
+  ],
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPageUrlTemplate": "{baseUrl}/novels/lastupdate_{page}.html",
+    "searchUrlTemplate": "{baseUrl}/modules/article/search.php",
+    "listItemSelector": "ul#article_list_content li, .newbox ul li, ul.list li",
+    "listTitleSelector": ".newnav h3 a:last-child, h3 a, a.imgbox",
+    "listAuthorSelector": ".labelbox label:first-child, .author",
+    "listCoverSelector": "img[data-src], img",
+    "listLatestChapterSelector": ".zxzj p a, .zxzj a, .chapter",
+    "detailTitleSelector": ".booknav2 h1 a, .booknav2 h1, h1",
+    "detailAuthorSelector": ".booknav2 p a[href*='author'], .booknav2 p:first-of-type a",
+    "detailCoverSelector": ".bookimg2 img, meta[property='og:image']",
+    "detailDescriptionSelector": ".navtxt p, .navtxt",
+    "detailStatusSelector": ".booknav2 p",
+    "detailGenreSelector": ".booknav2 p a[href*='class']",
+    "detailChapterListUrlSelector": ".bookbtn a[href*='/book/'], a.more-btn, a:contains(完整目录)",
+    "chapterListSelector": "#catalog ul li a, .catalog ul li a, .qustime ul li a",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}",
+    "chapterTitleSelector": "h1.hide720, .txtnav h1, h1",
+    "chapterContentSelector": ".txtnav, #txtnav, #content",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": "script, style, noscript, iframe, .txtinfo, .hide720, .bottom-ad, .page1, div[id*='ad']",
+    "prevChapterSelector": ".page1 a:contains(上一章), a:contains(上一章)",
+    "nextChapterSelector": ".page1 a:contains(下一章), a:contains(下一章)"
+  },
+  "cleanRules": [
+    { "pattern": "\\(本章完\\)", "replacement": "", "isRegex": true, "ignoreCase": true },
+    { "pattern": "69书吧|www\\.69shuba\\.[a-z]+", "replacement": "", "isRegex": true, "ignoreCase": true },
+    { "pattern": "请记住本书首发域名.*", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ]
+}

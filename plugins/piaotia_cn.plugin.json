@@ -1,0 +1,71 @@
+{
+  "id": "piaotia_cn",
+  "name": "Phiêu Thiên Văn Học (Piaotia)",
+  "version": "2.0.0",
+  "author": "Cộng Đồng Plugin",
+  "description": "Nguồn Trung lâu đời ít quảng cáo, cập nhật đều các bộ Tiên Hiệp, Huyền Huyễn và Ngôn Tình, hỗ trợ bảng mã GBK.",
+  "driver": "generic",
+  "language": "zh",
+  "isChineseSource": true,
+  "baseUrl": "https://www.piaotia.com",
+  "mirrorUrls": [
+    "https://www.piaotian.com",
+    "https://www.ptwxz.com"
+  ],
+  "charset": "GBK",
+  "convertTraditionalToSimplified": false,
+  "searchMethod": "POST",
+  "searchBodyTemplate": "searchtype=articlename&searchkey={query}",
+  "requestDelayMs": 300,
+  "customHeaders": {
+    "Accept-Language": "zh-CN,zh;q=0.9"
+  },
+  "authConfig": {
+    "supportsLogin": false,
+    "loginUrl": "https://www.piaotia.com/",
+    "loginHint": "Nguồn đọc miễn phí không yêu cầu đăng nhập.",
+    "authCookieKeys": [],
+    "lockedChapterMarkers": [],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "categories": [
+    { "id": "lastupdate", "name": "Mới Cập Nhật", "urlPath": "booktopallvisit/0/1.html" },
+    { "id": "xuanhuan", "name": "Huyền Huyễn", "urlPath": "booksort1/0/1.html" },
+    { "id": "xianxia", "name": "Tiên Hiệp Tu Chân", "urlPath": "booksort2/0/1.html" },
+    { "id": "dushi", "name": "Đô Thị Ngôn Tình", "urlPath": "booksort3/0/1.html" },
+    { "id": "lishi", "name": "Lịch Sử Quân Sự", "urlPath": "booksort4/0/1.html" },
+    { "id": "wangyou", "name": "Võng Du Cạnh Kỹ", "urlPath": "booksort5/0/1.html" },
+    { "id": "kehuan", "name": "Khoa Huyễn", "urlPath": "booksort6/0/1.html" },
+    { "id": "full", "name": "Hoàn Thành", "urlPath": "booksort/0/1.html" }
+  ],
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPageUrlTemplate": "{baseUrl}/booktopallvisit/0/{page}.html",
+    "searchUrlTemplate": "{baseUrl}/modules/article/search.php",
+    "listItemSelector": "table.grid tr:gt(0), ul.list li",
+    "listTitleSelector": "td:first-child a, a[href*='/bookinfo/']",
+    "listAuthorSelector": "td:nth-child(3), .author",
+    "listCoverSelector": "img",
+    "listLatestChapterSelector": "td:nth-child(2) a",
+    "detailTitleSelector": "#content h1, h1",
+    "detailAuthorSelector": "#content table td:contains(作), meta[property='og:novel:author']",
+    "detailCoverSelector": "#content img[src*='/files/article/image/'], meta[property='og:image']",
+    "detailDescriptionSelector": "#content table td:contains(内容简介), meta[property='og:description']",
+    "detailStatusSelector": "#content table td:contains(文章状态)",
+    "detailGenreSelector": "#content table td:contains(类)",
+    "detailChapterListUrlSelector": "a:contains(阅读), a[href*='/html/']",
+    "chapterListSelector": ".centent ul li a, .mainbody ul li a",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}",
+    "chapterTitleSelector": "h1, .title",
+    "chapterContentSelector": "#content, .mainbody",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": "script, style, noscript, iframe, .toplink, .bottomlink, .hottext, table, h1, div[class*='ad']",
+    "prevChapterSelector": "a:contains(上一章)",
+    "nextChapterSelector": "a:contains(下一章)"
+  },
+  "cleanRules": [
+    { "pattern": "飘天文学|www\\.piaotia\\.[a-z]+|piaotian\\.[a-z]+", "replacement": "", "isRegex": true, "ignoreCase": true },
+    { "pattern": "高速文字首发.*", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ]
+}

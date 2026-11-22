@@ -1,0 +1,74 @@
+{
+  "id": "fanqie_cn",
+  "name": "Cà Chua Tiểu Thuyết (Fanqie)",
+  "version": "2.0.0",
+  "author": "Cộng Đồng Plugin",
+  "description": "Nguồn Cà Chua (番茄小说) hỗ trợ đăng nhập tài khoản WebView và dán Cookie để đọc các chương yêu cầu tài khoản.",
+  "driver": "generic",
+  "language": "zh",
+  "isChineseSource": true,
+  "baseUrl": "https://fanqienovel.com",
+  "mirrorUrls": [
+    "https://m.fanqienovel.com"
+  ],
+  "charset": "UTF-8",
+  "convertTraditionalToSimplified": false,
+  "searchMethod": "GET",
+  "searchBodyTemplate": "",
+  "requestDelayMs": 450,
+  "customHeaders": {
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"
+  },
+  "authConfig": {
+    "supportsLogin": true,
+    "loginUrl": "https://fanqienovel.com/",
+    "loginHint": "Đăng nhập tài khoản Cà Chua (Douyin / số điện thoại) ngay trong WebView rồi bấm 'Lưu phiên & Quay lại', hoặc dán Cookie từ trình duyệt.",
+    "authCookieKeys": ["sessionid", "sessionid_ss", "sid_tt", "ttwid", "passport_csrf_token"],
+    "lockedChapterMarkers": [
+      "请登录",
+      "登录后继续阅读",
+      "登录后阅读",
+      "前往番茄小说",
+      "下载番茄小说",
+      "本章为付费章节",
+      "立即登录"
+    ],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "categories": [
+    { "id": "rank_male", "name": "Bảng Nam Nổi Bật", "urlPath": "rank/1_2_258" },
+    { "id": "rank_female", "name": "Bảng Nữ Ngôn Tình", "urlPath": "rank/0_2_258" },
+    { "id": "library_all", "name": "Thư Viện Tổng Hợp", "urlPath": "library" },
+    { "id": "xuanhuan", "name": "Huyền Huyễn Đô Thị", "urlPath": "library/all/page_1?sort=0" },
+    { "id": "full", "name": "Truyện Đã Hoàn Thành", "urlPath": "library/all/page_1?status=0" }
+  ],
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPageUrlTemplate": "{baseUrl}/library/all/page_{page}",
+    "searchUrlTemplate": "{baseUrl}/search/{query}",
+    "listItemSelector": ".muye-rank-book-list .rank-book-item, .book-list .book-item, .search-book-list .book-item",
+    "listTitleSelector": ".book-item-title a, .title a, a[href*='/page/']",
+    "listAuthorSelector": ".author, .book-item-author, .author-name",
+    "listCoverSelector": "img",
+    "listLatestChapterSelector": ".latest-chapter, .update-info",
+    "detailTitleSelector": ".info-name h1, h1",
+    "detailAuthorSelector": ".author-name-text, .info-author .author-name",
+    "detailCoverSelector": ".book-cover-img, .page-header-img img, meta[property='og:image']",
+    "detailDescriptionSelector": ".page-abstract-content p, .page-abstract-content, meta[property='og:description']",
+    "detailStatusSelector": ".info-label span",
+    "detailGenreSelector": ".info-label span",
+    "detailChapterListUrlSelector": "",
+    "chapterListSelector": ".page-directory-content .chapter-item a, .chapter-list a[href*='/reader/']",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}",
+    "chapterTitleSelector": "h1.muye-reader-title, .muye-reader-title, h1",
+    "chapterContentSelector": ".muye-reader-content, .muye-reader-content-16, article",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": "script, style, noscript, iframe, .muye-reader-download, .reader-tip",
+    "prevChapterSelector": "a:contains(上一章), .muye-reader-btn-prev",
+    "nextChapterSelector": "a:contains(下一章), .muye-reader-btn-next"
+  },
+  "cleanRules": [
+    { "pattern": "番茄小说|fanqienovel\\.com", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ]
+}

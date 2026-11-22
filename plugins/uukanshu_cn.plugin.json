@@ -1,0 +1,70 @@
+{
+  "id": "uukanshu_cn",
+  "name": "UU Khán Thư (UUKanshu)",
+  "version": "2.0.0",
+  "author": "Cộng Đồng Plugin",
+  "description": "Kho truyện Trung miễn phí lớn, hỗ trợ nhiều tên miền dự phòng và cấu trúc chương sạch chữ.",
+  "driver": "generic",
+  "language": "zh",
+  "isChineseSource": true,
+  "baseUrl": "https://uukanshu.cc",
+  "mirrorUrls": [
+    "https://www.uukanshu.cc",
+    "https://www.uukanshu.net"
+  ],
+  "charset": "UTF-8",
+  "convertTraditionalToSimplified": false,
+  "searchMethod": "POST",
+  "searchBodyTemplate": "searchkey={query}",
+  "requestDelayMs": 300,
+  "customHeaders": {
+    "Accept-Language": "zh-CN,zh;q=0.9"
+  },
+  "authConfig": {
+    "supportsLogin": false,
+    "loginUrl": "https://uukanshu.cc/",
+    "loginHint": "Nguồn đọc miễn phí; nếu nhà mạng chặn tên miền chính hãy đổi sang tên miền dự phòng.",
+    "authCookieKeys": ["cf_clearance"],
+    "lockedChapterMarkers": [],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "categories": [
+    { "id": "all", "name": "Truyện Đề Cử Hot", "urlPath": "top/allvisit_1.html" },
+    { "id": "xuanhuan", "name": "Huyền Huyễn Kỳ Huyễn", "urlPath": "class_1_1.html" },
+    { "id": "xianxia", "name": "Võ Hiệp Tiên Hiệp", "urlPath": "class_2_1.html" },
+    { "id": "dushi", "name": "Đô Thị Ngôn Tình", "urlPath": "class_3_1.html" },
+    { "id": "lishi", "name": "Lịch Sử Quân Sự", "urlPath": "class_4_1.html" },
+    { "id": "kehuan", "name": "Khoa Huyễn Linh Dị", "urlPath": "class_5_1.html" },
+    { "id": "full", "name": "Truyện Hoàn Thành", "urlPath": "quanben/1.html" }
+  ],
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPageUrlTemplate": "{baseUrl}/top/allvisit_{page}.html",
+    "searchUrlTemplate": "{baseUrl}/search",
+    "listItemSelector": ".bookbox, .list-item, .content .book-list li",
+    "listTitleSelector": ".bookname a, h4 a, h3 a",
+    "listAuthorSelector": ".author, .bookinfo .author",
+    "listCoverSelector": "img",
+    "listLatestChapterSelector": ".update a, .cat a",
+    "detailTitleSelector": "h1.booktitle, .bookinfo h1, h1",
+    "detailAuthorSelector": ".booktag a.red, .booktag a:first-child, .author",
+    "detailCoverSelector": ".bookintro img, .thumbnail, meta[property='og:image']",
+    "detailDescriptionSelector": ".bookintro p, .bookintro, meta[property='og:description']",
+    "detailStatusSelector": ".booktag span",
+    "detailGenreSelector": ".booktag a",
+    "detailChapterListUrlSelector": "",
+    "chapterListSelector": "#list-chapterAll dd a, .listmain dd a, #chapterList li a",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}",
+    "chapterTitleSelector": "h1.pt10, .read h1, h1",
+    "chapterContentSelector": ".readcotent, #bookContent, #content",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": "script, style, noscript, iframe, .ad_content, .google-auto-placed, div[class*='ad']",
+    "prevChapterSelector": "#linkPrev, a:contains(上一章)",
+    "nextChapterSelector": "#linkNext, a:contains(下一章)"
+  },
+  "cleanRules": [
+    { "pattern": "UU看书|www\\.uukanshu\\.[a-z]+", "replacement": "", "isRegex": true, "ignoreCase": true },
+    { "pattern": "请记住本书首发域名.*", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ]
+}
