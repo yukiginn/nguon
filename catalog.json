@@ -1,99 +1,89 @@
 {
-  "name": "Kho Plugin Truyện TTS (100% Khai Báo JSON)",
-  "version": "3.0.0",
+  "name": "Truyện TTS",
+  "version": "3.1.0",
   "updatedAt": "2026-11-23",
-  "description": "Trọn bộ 9 nguồn truyện sống thực tế (HTTP 200) chạy 100% bằng cấu hình JSON độc lập (configurable_css v3). Mọi bộ chọn HTML/API, thể loại và quy tắc lọc rác đều nằm trong từng tệp .plugin.json, hoàn toàn không phụ thuộc mã nguồn riêng trong APK.",
+  "description": "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
   "moviePluginFile": "phimai_sources.plugin.json",
   "plugins": [
     {
       "id": "plugin_truyenfull",
       "name": "Truyện Full",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "language": "vi",
       "driverType": "configurable_css",
       "baseUrl": "https://truyenfull.live",
-      "description": "Truyện Full (truyenfull.live) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 59 danh mục & thể loại.",
+      "description": "Kho truyện chữ tiếng Việt miễn phí với 59 thể loại đa dạng. Không cần đăng nhập.",
       "file": "plugins/truyenfull.plugin.json"
     },
     {
       "id": "plugin_metruyenchu",
       "name": "Mê Truyện Chữ",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "language": "vi",
       "driverType": "configurable_css",
       "baseUrl": "https://metruyenchu.com.vn",
-      "description": "Mê Truyện Chữ (metruyenchu.com.vn) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 52 danh mục & thể loại.",
+      "description": "Kho truyện chữ tiếng Việt phong phú với 52 thể loại. Không cần đăng nhập.",
       "file": "plugins/metruyenchu.plugin.json"
     },
     {
       "id": "plugin_dtruyen",
       "name": "WebTruyen (DTruyen)",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "language": "vi",
       "driverType": "configurable_css",
       "baseUrl": "https://wetruyen.com",
-      "description": "WebTruyen / Wetruyen / DTruyen chạy 100% bằng cấu hình JSON độc lập, đầy đủ 46 danh sách & thể loại.",
+      "description": "Kho truyện ngôn tình, tiên hiệp, kiếm hiệp tiếng Việt với 46 thể loại. Không cần đăng nhập.",
       "file": "plugins/dtruyen.plugin.json"
     },
     {
       "id": "plugin_wikidich",
       "name": "Truyện Wiki Dịch",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "language": "vi",
       "driverType": "configurable_css",
       "baseUrl": "https://truyenwikidich.net",
-      "description": "Wiki Dịch (truyenwikidich.net / wikicv.org) hỗ trợ chữ ký SHA-256 lấy mục lục chương qua cấu hình JSON.",
+      "description": "Kho truyện dịch tiếng Việt đa dạng. Hỗ trợ đăng nhập tài khoản để đọc chương thành viên.",
       "file": "plugins/wikidich.plugin.json"
     },
     {
       "id": "plugin_69shuba",
       "name": "69 Thư Ba (69shuba)",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "language": "zh",
       "driverType": "configurable_css",
       "baseUrl": "https://www.69shuba.com",
-      "description": "69 Thư Ba (www.69shuba.com, GB18030) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 17 bảng xếp hạng & thể loại.",
+      "description": "Kho truyện tiếng Trung cập nhật nhanh, hỗ trợ tự động dịch sang tiếng Việt. Không cần đăng nhập.",
       "file": "plugins/69shuba.plugin.json"
     },
     {
       "id": "plugin_fanqie_cn",
       "name": "Cà Chua (Fanqie)",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "language": "zh",
       "driverType": "configurable_css",
       "baseUrl": "https://fanqienovel.com",
-      "description": "Cà Chua Fanqie (fanqienovel.com) chạy JSON API khai báo hoàn toàn trong plugin.json, đầy đủ 14 danh mục.",
+      "description": "Kho truyện tiếng Trung Cà Chua nổi tiếng, tự động dịch tiếng Việt. Hỗ trợ đăng nhập tài khoản.",
       "file": "plugins/fanqie_cn.plugin.json"
     },
     {
       "id": "plugin_biquge_cn",
       "name": "Bút Thú Các (Biquge)",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "language": "zh",
       "driverType": "configurable_css",
       "baseUrl": "https://www.bqg9.xyz",
-      "description": "Bút Thú Các (www.bqg9.xyz / biquge5200.cc, GB18030) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 9 thể loại.",
+      "description": "Kho truyện tiếng Trung tổng hợp hơn 3.000 đầu truyện, tự động dịch tiếng Việt. Không cần đăng nhập.",
       "file": "plugins/biquge_cn.plugin.json"
     },
     {
       "id": "plugin_piaotia_cn",
       "name": "Phiêu Thiên Văn Học (Piaotia)",
-      "version": "2.1.0",
+      "version": "3.1.0",
       "language": "zh",
       "driverType": "configurable_css",
       "baseUrl": "https://www.piaotia.com",
-      "description": "Phiêu Thiên (www.piaotia.com, GB18030) chạy 100% bằng cấu hình JSON độc lập với 12 danh mục.",
+      "description": "Kho truyện tiếng Trung lâu đời, đầy đủ bảng xếp hạng và thể loại, tự động dịch tiếng Việt. Không cần đăng nhập.",
       "file": "plugins/piaotia_cn.plugin.json"
-    },
-    {
-      "id": "plugin_truyenyy_vi",
-      "name": "Truyện YY (TruyenYY.co)",
-      "version": "2.1.0",
-      "language": "vi",
-      "driverType": "configurable_css",
-      "baseUrl": "https://truyenyy.co",
-      "description": "Truyện YY (truyenyy.co) chạy 100% bằng cấu hình JSON độc lập với 14 danh sách & chủ đề.",
-      "file": "plugins/truyenyy_vi.plugin.json"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "id": "plugin_dtruyen",
   "name": "WebTruyen (DTruyen)",
-  "version": "3.0.0",
-  "author": "Community Plugin",
-  "description": "Nguồn truyện WebTruyen / Wetruyen / DTruyen (webtruyen.com) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 46 danh sách & thể loại.",
+  "version": "3.1.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện ngôn tình, tiên hiệp, kiếm hiệp tiếng Việt với 46 thể loại. Không cần đăng nhập.",
   "language": "vi",
   "baseUrl": "https://wetruyen.com",
   "mirrorUrls": [
@@ -36,7 +36,7 @@
     "detailChapterListUrlSelector": "",
     "chapterListSelector": "#list-chapter ul.list-chapter li a, ul.list-chapter li a, #chapters ul.chapters li a",
     "chapterListReverse": false,
-    "chapterPageUrlTemplate": "{novelUrl}/{page}/#chapters",
+    "chapterPageUrlTemplate": "{novelUrl}/trang-{page}/#chapter-list",
     "chapterTitleSelector": "h2.chapter-title, h1.chapter-title, .chapter-title, h2",
     "chapterContentSelector": "div#chapter-c, #chapter-content, .chapter-c",
     "removeElementsSelector": "noscript, script, style, iframe, .ads, div[id*='ads'], .ads-responsive, [style*='display: none']",
@@ -44,7 +44,6 @@
     "nextChapterSelector": "a#next_chap, a.next-chap, a[rel='next']",
     "invalidCoverPatterns": [
       "pixel-cover.gif",
-      "/medias/covers/25/",
       "/24977-"
     ],
     "coverUrlReplacements": {

@@ -1,27 +1,22 @@
-# Kho Plugin Truyện TTS (v3.0 — 100% Khai Báo Rời, Zero Code Trang Web Trong APK)
+# Kho Nguồn Truyện TTS
 
-Kho chứa toàn bộ plugin nguồn truyện & phim rời (đã tách hoàn toàn khỏi file APK). Ứng dụng APK chỉ chứa bộ đọc tổng quát (`configurable_css`), **không chứa bất kỳ tên trang web, tên miền, thể loại hay bộ xử lý riêng của trang nào**. Mọi thể loại, đường dẫn, mirror, API và bộ chọn CSS đều nằm 100% trong từng file `.plugin.json`.
+Kho tổng hợp các nguồn truyện chữ tiếng Việt và tiếng Trung (hỗ trợ tự động dịch sang tiếng Việt) cho ứng dụng **Truyện TTS**.
 
-## 9 Nguồn Đọc Truyện Đã Kiểm Chứng Live HTTP 200
+## Danh sách nguồn (8 nguồn)
 
-| # | Tên nguồn | Tên miền chính | Driver | Số thể loại |
-|---|---|---|---|---|
-| 1 | **Truyện Full** | `https://truyenfull.live` | `configurable_css` | 59 danh mục & thể loại |
-| 2 | **Mê Truyện Chữ** | `https://metruyenchu.com.vn` | `configurable_css` | 52 danh mục & thể loại |
-| 3 | **WebTruyen (DTruyen)** | `https://wetruyen.com` (gương `webtruyen.com`, `dtruyen.com`) | `configurable_css` | 46 danh mục & thể loại Full |
-| 4 | **Truyện Wiki Dịch** | `https://truyenwikidich.net` (gương `wikicv.org`) | `configurable_css` | 4 mục chính (Truyện Nam, Nữ Tần, Đam Mỹ, Chương Mới) |
-| 5 | **69 Thư Ba (69shuba)** | `https://www.69shuba.com` (gương `69shuba.com`, `69shu.com`, `69shuba.cx`) | `configurable_css` | 17 bảng xếp hạng & thể loại |
-| 6 | **Cà Chua (Fanqie)** | `https://fanqienovel.com` | `configurable_css` (JSON API + cipher) | 14 danh mục API trực tiếp |
-| 7 | **Bút Thú Các (Biquge)** | `https://www.bqg9.xyz` (gương `biquge5200.cc`) | `configurable_css` | 9 danh mục & thể loại |
-| 8 | **Phiêu Thiên Văn Học (Piaotia)** | `https://www.piaotia.com` | `configurable_css` (GB18030) | 12 bảng xếp hạng & thể loại |
-| 9 | **Truyện YY (TruyenYY.co)** | `https://truyenyy.co` | `configurable_css` | 14 danh sách & chủ đề |
-
-## Plugin Xem Phim
-
-- `phimai_sources.plugin.json`: Nguồn phim tách rời cho tab Phim (nạp bằng nút **Nguồn phim** trong tab Phim).
+| Nguồn truyện | Ngôn ngữ | Đăng nhập | Ghi chú |
+| --- | --- | --- | --- |
+| **Truyện Full** | Tiếng Việt | Không cần | 59 thể loại đa dạng |
+| **Mê Truyện Chữ** | Tiếng Việt | Không cần | 52 thể loại phong phú |
+| **WebTruyen (DTruyen)** | Tiếng Việt | Không cần | 46 thể loại ngôn tình, tiên hiệp, kiếm hiệp |
+| **Truyện Wiki Dịch** | Tiếng Việt | Có hỗ trợ | Đăng nhập để đọc chương thành viên (tùy chọn) |
+| **69 Thư Ba (69shuba)** | Tiếng Trung | Không cần | Cập nhật nhanh, tự động dịch tiếng Việt |
+| **Cà Chua (Fanqie)** | Tiếng Trung | Có hỗ trợ | Kho truyện lớn, tự động dịch, hỗ trợ đăng nhập |
+| **Bút Thú Các (Biquge)** | Tiếng Trung | Không cần | Hơn 3.000 đầu truyện, tự động dịch tiếng Việt |
+| **Phiêu Thiên Văn Học (Piaotia)** | Tiếng Trung | Không cần | Đầy đủ bảng xếp hạng & thể loại, tự động dịch |
 
 ## Cách sử dụng
 
-1. Giải nén file `novel-plugins-repo.zip` và đẩy toàn bộ thư mục (`catalog.json`, `phimai_sources.plugin.json`, thư mục `plugins/`) lên kho GitHub/GitLab của bạn.
-2. Mở ứng dụng **Truyện TTS → Cài đặt → Quản lý Plugin → Kho Git**.
-3. Dán link kho Git của bạn và nhấn **Đồng bộ**, sau đó cài đặt/cập nhật các nguồn mong muốn.
+1. Mở ứng dụng **Truyện TTS** → vào mục **Kho Plugin Nguồn**.
+2. Kho **Truyện TTS** đã được tích hợp sẵn (hoặc thêm thủ công đường dẫn kho Git này).
+3. Chọn cài đặt các nguồn truyện yêu thích và bắt đầu đọc / nghe truyện.

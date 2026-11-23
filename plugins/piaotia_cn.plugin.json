@@ -1,9 +1,9 @@
 {
   "id": "plugin_piaotia_cn",
   "name": "Phiêu Thiên Văn Học (Piaotia)",
-  "version": "2.1.0",
-  "author": "Cộng đồng Truyện TTS",
-  "description": "Nguồn truyện tiếng Trung Phiêu Thiên Văn Học (www.piaotia.com) đã kiểm tra thực tế (HTTP 200), hỗ trợ bảng mã GB18030, 12 danh mục & mục lục đầy đủ.",
+  "version": "3.1.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện tiếng Trung lâu đời, đầy đủ bảng xếp hạng và thể loại, tự động dịch tiếng Việt. Không cần đăng nhập.",
   "language": "zh",
   "baseUrl": "https://www.piaotia.com",
   "mirrorUrls": [],
@@ -40,7 +40,9 @@
     "chapterContentSelector": "body",
     "removeElementsSelector": "script, style, noscript, iframe, #guild, .toplink, .bottomlink, #bottomlink, #Commenddiv, #feit2, h1, table, center, .ads",
     "prevChapterSelector": ".toplink a:contains(上一章), .bottomlink a:contains(上一章)",
-    "nextChapterSelector": ".toplink a:contains(下一章), .bottomlink a:contains(下一章)"
+    "nextChapterSelector": ".toplink a:contains(下一章), .bottomlink a:contains(下一章)",
+    "bookIdExtractRegex": "/(\\d+)\\.html",
+    "coverFallbackTemplate": "https://www.piaotia.com/files/article/image/{bookIdDiv1000}/{bookId}/{bookId}s.jpg"
   },
   "cleanRules": [
     { "pattern": "飘天文学\\S*|www\\.piaotia\\.com|piaotia\\.com", "replacement": "", "isRegex": true, "ignoreCase": true },

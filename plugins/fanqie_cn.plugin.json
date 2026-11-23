@@ -1,9 +1,9 @@
 {
   "id": "plugin_fanqie_cn",
   "name": "Cà Chua (Fanqie)",
-  "version": "3.0.0",
-  "author": "Cộng đồng Truyện TTS",
-  "description": "Nguồn truyện Cà Chua Fanqie (fanqienovel.com) chạy 100% bằng cấu hình JSON API khai báo độc lập, đầy đủ 14 danh mục Nam Tần, Nữ Tần, Bảng xếp hạng và tự dịch VietPhrase/AI.",
+  "version": "3.1.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện tiếng Trung Cà Chua nổi tiếng, tự động dịch tiếng Việt. Hỗ trợ đăng nhập tài khoản.",
   "language": "zh",
   "baseUrl": "https://fanqienovel.com",
   "mirrorUrls": [],

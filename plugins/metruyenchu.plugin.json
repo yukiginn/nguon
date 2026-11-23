@@ -1,9 +1,9 @@
 {
   "id": "plugin_metruyenchu",
   "name": "Mê Truyện Chữ",
-  "version": "3.0.0",
-  "author": "Community Plugin",
-  "description": "Nguồn truyện Mê Truyện Chữ (metruyenchu.com.vn) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 52 danh mục & thể loại.",
+  "version": "3.1.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện chữ tiếng Việt phong phú với 52 thể loại. Không cần đăng nhập.",
   "language": "vi",
   "baseUrl": "https://metruyenchu.com.vn",
   "mirrorUrls": [],
@@ -31,7 +31,7 @@
     "detailStatusSelector": ".book-info-text .status, .label-status, .book-info-text",
     "detailGenreSelector": ".book-info-text a[itemprop='genre'], .book-info-text a[href*='/the-loai/']",
     "detailChapterListUrlSelector": "",
-    "chapterListSelector": "#chapter-list a, .chapter-list a, ul.list-chapter li a, #dsc a",
+    "chapterListSelector": "#chapter-list ul li a[href*='/chuong-'], .chapter-list ul li a[href*='/chuong-'], ul.list-chapter li a, #dsc a[href*='/chuong-']",
     "chapterListReverse": false,
     "chapterPageUrlTemplate": "{novelUrl}?page={page}#chapter-list",
     "chapterTitleSelector": "h2.chapter-title, h1.chapter-title, h2, h1",
@@ -43,7 +43,15 @@
       "no-cover",
       "default-cover",
       "spacer.gif"
-    ]
+    ],
+    "chapterApiConfig": {
+      "mode": "json_html_paginated",
+      "bookIdRegex": "page\\((\\d+),\\s*\\d+\\)",
+      "endpointTemplate": "{baseUrl}/get/listchap/{bookId}?page={page}",
+      "contentField": "data",
+      "itemSelector": "a[href*='/chuong-']",
+      "isAjax": true
+    }
   },
   "cleanRules": [
     { "pattern": "(?<=[\\p{L}\\p{N}])\\.(?=[\\p{L}\\p{N}])", "replacement": "", "isRegex": true, "ignoreCase": false },

@@ -1,9 +1,9 @@
 {
   "id": "plugin_truyenfull",
   "name": "Truyện Full",
-  "version": "3.0.0",
-  "author": "Community Plugin",
-  "description": "Nguồn truyện Truyện Full (truyenfull.live) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 59 danh mục & thể loại.",
+  "version": "3.1.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện chữ tiếng Việt miễn phí với 59 thể loại đa dạng. Không cần đăng nhập.",
   "language": "vi",
   "baseUrl": "https://truyenfull.live",
   "mirrorUrls": [

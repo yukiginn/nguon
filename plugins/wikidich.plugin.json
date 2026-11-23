@@ -1,9 +1,9 @@
 {
   "id": "plugin_wikidich",
   "name": "Truyện Wiki Dịch",
-  "version": "3.0.0",
-  "author": "Community Plugin",
-  "description": "Nguồn truyện Wiki Dịch (truyenwikidich.net / wikicv.org) chạy 100% bằng cấu hình JSON độc lập, hỗ trợ chữ ký SHA-256 lấy mục lục chương và đăng nhập tài khoản WebView.",
+  "version": "3.1.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện dịch tiếng Việt đa dạng. Hỗ trợ đăng nhập tài khoản để đọc chương thành viên.",
   "language": "vi",
   "baseUrl": "https://truyenwikidich.net",
   "mirrorUrls": [

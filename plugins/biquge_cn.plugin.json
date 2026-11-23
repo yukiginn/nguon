@@ -1,9 +1,9 @@
 {
   "id": "plugin_biquge_cn",
   "name": "Bút Thú Các (Biquge)",
-  "version": "3.0.0",
-  "author": "Cộng đồng Truyện TTS",
-  "description": "Nguồn truyện tiếng Trung Bút Thú Các (www.bqg9.xyz / www.biquge5200.cc) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 9 thể loại và tự dịch VietPhrase/AI.",
+  "version": "3.1.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện tiếng Trung tổng hợp hơn 3.000 đầu truyện, tự động dịch tiếng Việt. Không cần đăng nhập.",
   "language": "zh",
   "baseUrl": "https://www.bqg9.xyz",
   "mirrorUrls": [
@@ -14,15 +14,15 @@
   "searchMethod": "GET",
   "requestDelayMs": 200,
   "chapterPageSize": 100,
-  "defaultCategory": "Trang Chủ • Đề Cử",
+  "defaultCategory": "Kho Truyện Tổng Hợp",
   "enabled": true,
   "selectors": {
     "listUrlTemplate": "{baseUrl}/{categoryPath}",
     "listPageUrlTemplate": "{categoryUrl}",
     "listPaginationSupported": false,
     "searchUrlTemplate": "{baseUrl}/modules/article/search.php?searchkey={query}",
-    "listItemSelector": "#hotcontent .item, #newscontent .l ul li, #newscontent .r ul li, table.grid tr:has(td.odd)",
-    "listTitleSelector": "dl dt a, span.s2 a, td:nth-child(1) a",
+    "listItemSelector": "#hotcontent .item, #newscontent .l ul li, #newscontent .r ul li, .novellist ul li, .box ul li, table.grid tr:has(td.odd)",
+    "listTitleSelector": "dl dt a, span.s2 a, td:nth-child(1) a, a[href*='_']",
     "listAuthorSelector": "dl dt span, span.s5, span.s4, td:nth-child(3)",
     "listCoverSelector": ".image img, img",
     "listLatestChapterSelector": "span.s3 a, td:nth-child(2) a",
@@ -41,14 +41,18 @@
     "chapterContentSelector": "#content, #chaptercontent, .content",
     "removeElementsSelector": "script, style, noscript, iframe, a, .ads, div[id*='ads'], .box-ads",
     "prevChapterSelector": ".bottem1 a:contains(上一章), .bottem2 a:contains(上一章)",
-    "nextChapterSelector": ".bottem1 a:contains(下一章), .bottem2 a:contains(下一章)"
+    "nextChapterSelector": ".bottem1 a:contains(下一章), .bottem2 a:contains(下一章)",
+    "bookIdExtractRegex": "/\\d+_(\\d+)/",
+    "coverFallbackTemplate": "https://r.m.bqg9.xyz/files/article/image/{bookIdDiv1000}/{bookId}/{bookId}s.jpg"
   },
   "cleanRules": [
     { "pattern": "笔趣阁|biquge5200\\.cc|bqg9\\.xyz|请记住本书首发域名.*", "replacement": "", "isRegex": true, "ignoreCase": true },
     { "pattern": "天才一秒记住本站地址.*", "replacement": "", "isRegex": true, "ignoreCase": true }
   ],
   "categories": [
-    { "name": "Trang Chủ • Đề Cử", "urlOrPath": "", "group": "Bảng xếp hạng", "isDefaultHome": true },
+    { "name": "Kho Truyện Tổng Hợp", "urlOrPath": "xiaoshuodaquan/", "group": "Bảng xếp hạng", "isDefaultHome": true },
+    { "name": "Bảng Xếp Hạng", "urlOrPath": "paihangbang/", "group": "Bảng xếp hạng", "isDefaultHome": false },
+    { "name": "Trang Chủ • Đề Cử", "urlOrPath": "", "group": "Bảng xếp hạng", "isDefaultHome": false },
     { "name": "Huyền Huyễn", "urlOrPath": "xuanhuanxiaoshuo/", "group": "Thể loại", "isDefaultHome": false },
     { "name": "Tu Chân Tiên Hiệp", "urlOrPath": "xiuzhenxiaoshuo/", "group": "Thể loại", "isDefaultHome": false },
     { "name": "Đô Thị", "urlOrPath": "dushixiaoshuo/", "group": "Thể loại", "isDefaultHome": false },

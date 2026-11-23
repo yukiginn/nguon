@@ -1,9 +1,9 @@
 {
-  "id": "plugin_nguontrung_5in1",
+  "id": "plugin_69shuba",
   "name": "69 Thư Ba (69shuba)",
-  "version": "3.0.0",
-  "author": "Cộng đồng Truyện TTS",
-  "description": "Nguồn truyện tiếng Trung 69 Thư Ba (www.69shuba.com) chạy 100% bằng cấu hình JSON độc lập, đầy đủ 17 bảng xếp hạng & thể loại, bảng mã GB18030 và tự dịch VietPhrase/AI.",
+  "version": "3.1.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện tiếng Trung cập nhật nhanh, hỗ trợ tự động dịch sang tiếng Việt. Không cần đăng nhập.",
   "language": "zh",
   "baseUrl": "https://www.69shuba.com",
   "mirrorUrls": [
