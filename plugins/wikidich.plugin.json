@@ -1,0 +1,80 @@
+{
+  "id": "plugin_wikidich",
+  "name": "Truyện Wiki Dịch",
+  "version": "3.0.0",
+  "author": "Community Plugin",
+  "description": "Nguồn truyện Wiki Dịch (truyenwikidich.net / wikicv.org) chạy 100% bằng cấu hình JSON độc lập, hỗ trợ chữ ký SHA-256 lấy mục lục chương và đăng nhập tài khoản WebView.",
+  "language": "vi",
+  "baseUrl": "https://truyenwikidich.net",
+  "mirrorUrls": [
+    "https://wikicv.org"
+  ],
+  "driverType": "configurable_css",
+  "charset": "UTF-8",
+  "searchMethod": "GET",
+  "requestDelayMs": 200,
+  "chapterPageSize": 100,
+  "defaultCategory": "Truyện Nam",
+  "enabled": true,
+  "authConfig": {
+    "supportsLogin": true,
+    "loginUrl": "https://wikicv.org/dang-nhap",
+    "loginHint": "Đăng nhập tài khoản Wiki Dịch / WikiCV của bạn nếu chương yêu cầu quyền thành viên.",
+    "authCookieKeys": ["session", "user_id", "token"],
+    "lockedChapterMarkers": ["Vui lòng đăng nhập", "chương riêng tư"],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPageUrlTemplate": "{categoryUrl}",
+    "listPaginationSupported": false,
+    "searchUrlTemplate": "{baseUrl}/tim-kiem?q={query}",
+    "listItemSelector": ".book-list .book-item, .book-item, table tr:has(a[href^='/truyen/'])",
+    "listTitleSelector": ".info-col a:has(h5.book-title), .info-col a[href*='/truyen/'], a:has(h5.book-title)",
+    "listAuthorSelector": ".book-author a, .book-author",
+    "listCoverSelector": ".cover-col img, img",
+    "listLatestChapterSelector": ".latest-chap, .book-chap",
+    "detailTitleSelector": ".cover-info h2, h1, h2",
+    "detailAuthorSelector": ".cover-info a[href*='/tac-gia/']",
+    "detailCoverSelector": ".cover-wrapper img, img.materialboxed, meta[property='og:image']",
+    "detailDescriptionSelector": ".book-desc-detail, .book-desc, [itemprop='description']",
+    "detailStatusSelector": ".cover-info p",
+    "detailGenreSelector": ".book-desc a[href*='tag'], .cover-info a[href*='gender']",
+    "detailChapterListUrlSelector": "",
+    "chapterListSelector": "li.chapter-name a[href^='/truyen/'], a[href^='/truyen/']",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}",
+    "chapterTitleSelector": "#bookContent p.book-title:nth-of-type(2), h1, .book-title",
+    "chapterContentSelector": "#bookContentBody, .book-content-body",
+    "removeElementsSelector": "script, style, div.ads, iframe, noscript",
+    "prevChapterSelector": "a#btnPreChapter, a:contains(Chương trước)",
+    "nextChapterSelector": "a#btnNextChapter, a:contains(Chương sau)",
+    "blockedUrlPatterns": [
+      "khu-tim-truyen"
+    ],
+    "invalidCoverPatterns": [
+      "default-cover"
+    ],
+    "chapterApiConfig": {
+      "mode": "sha256_signed_html",
+      "bookIdRegex": "var\\s+bookId\\s*=\\s*\"([^\"]+)\"",
+      "signKeyRegex": "var\\s+signKey\\s*=\\s*\"([^\"]+)\"",
+      "fuzzyShiftRegex": "function\\s+fuzzySign\\(text\\)\\s*\\{[^}]*substring\\((\\d+)\\)",
+      "fuzzyReverseMarker": "reverseString",
+      "defaultShiftOffset": 7,
+      "pageSize": 500,
+      "isAjax": true,
+      "endpointTemplate": "{baseUrl}/book/index?bookId={bookId}&start={start}&size={size}&signKey={signKey}&sign={sign}",
+      "itemSelector": "li.chapter-name a[href^='/truyen/'], a[href^='/truyen/']"
+    }
+  },
+  "cleanRules": [
+    { "pattern": "truyenwikidich\\.net|wikicv\\.org", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ],
+  "categories": [
+    { "name": "Truyện Nam", "urlOrPath": "truyen-nam", "group": "Danh sách", "isDefaultHome": true },
+    { "name": "Nữ Tần", "urlOrPath": "nu-tan", "group": "Danh sách", "isDefaultHome": false },
+    { "name": "Đam Mỹ", "urlOrPath": "dam-my", "group": "Danh sách", "isDefaultHome": false },
+    { "name": "Chương Mới", "urlOrPath": "chuong-moi", "group": "Danh sách", "isDefaultHome": false }
+  ]
+}

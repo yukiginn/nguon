@@ -1,0 +1,63 @@
+{
+  "id": "plugin_piaotia_cn",
+  "name": "Phiêu Thiên Văn Học (Piaotia)",
+  "version": "2.1.0",
+  "author": "Cộng đồng Truyện TTS",
+  "description": "Nguồn truyện tiếng Trung Phiêu Thiên Văn Học (www.piaotia.com) đã kiểm tra thực tế (HTTP 200), hỗ trợ bảng mã GB18030, 12 danh mục & mục lục đầy đủ.",
+  "language": "zh",
+  "baseUrl": "https://www.piaotia.com",
+  "mirrorUrls": [],
+  "driverType": "configurable_css",
+  "charset": "GB18030",
+  "searchMethod": "GET",
+  "requestDelayMs": 300,
+  "chapterPageSize": 100,
+  "defaultCategory": "Bảng Tổng Đọc Nhiều",
+  "customHeaders": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  "enabled": true,
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}/1.html",
+    "listPageUrlTemplate": "{baseUrl}/{categoryPath}/{page}.html",
+    "searchUrlTemplate": "{baseUrl}/modules/article/search.php?searchtype=articlename&searchkey={query}&page={page}",
+    "listItemSelector": "table.grid tr:has(td.odd)",
+    "listTitleSelector": "td:nth-child(1) a",
+    "listLatestChapterSelector": "td:nth-child(2) a",
+    "listAuthorSelector": "td:nth-child(3)",
+    "listCoverSelector": "img",
+    "detailTitleSelector": "h1",
+    "detailAuthorSelector": "td:contains(作 者), td:contains(作者)",
+    "detailCoverSelector": "img[src*='/files/article/image/']",
+    "detailDescriptionSelector": "td:contains(内容简介), div#content",
+    "detailStatusSelector": "td:contains(文章状态)",
+    "detailGenreSelector": "td:contains(类 别)",
+    "detailChapterListUrlSelector": "a[href*='/html/'][href$='/index.html'], a[href*='/html/'][href$='/']",
+    "chapterListSelector": ".centent ul li a, .mainbody ul li a, ul li a[href$='.html']",
+    "chapterListReverse": false,
+    "chapterPageUrlTemplate": "{novelUrl}",
+    "chapterTitleSelector": "h1",
+    "chapterContentSelector": "body",
+    "removeElementsSelector": "script, style, noscript, iframe, #guild, .toplink, .bottomlink, #bottomlink, #Commenddiv, #feit2, h1, table, center, .ads",
+    "prevChapterSelector": ".toplink a:contains(上一章), .bottomlink a:contains(上一章)",
+    "nextChapterSelector": ".toplink a:contains(下一章), .bottomlink a:contains(下一章)"
+  },
+  "cleanRules": [
+    { "pattern": "飘天文学\\S*|www\\.piaotia\\.com|piaotia\\.com", "replacement": "", "isRegex": true, "ignoreCase": true },
+    { "pattern": "\\(未完待续.*?\\)", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ],
+  "categories": [
+    { "name": "Bảng Tổng Đọc Nhiều", "urlOrPath": "booktopallvisit/0", "group": "Bảng xếp hạng", "isDefaultHome": true },
+    { "name": "Bảng Đọc Nhiều Tháng", "urlOrPath": "booktopmonthvisit/0", "group": "Bảng xếp hạng", "isDefaultHome": false },
+    { "name": "Bảng Đề Cử Tổng", "urlOrPath": "booktopallvote/0", "group": "Bảng xếp hạng", "isDefaultHome": false },
+    { "name": "Huyền Huyễn Ma Pháp", "urlOrPath": "booksort1/0", "group": "Thể loại", "isDefaultHome": false },
+    { "name": "Võ Hiệp Tu Chân", "urlOrPath": "booksort2/0", "group": "Thể loại", "isDefaultHome": false },
+    { "name": "Đô Thị Ngôn Tình", "urlOrPath": "booksort3/0", "group": "Thể loại", "isDefaultHome": false },
+    { "name": "Lịch Sử Quân Sự", "urlOrPath": "booksort4/0", "group": "Thể loại", "isDefaultHome": false },
+    { "name": "Võng Du Cạnh Kỹ", "urlOrPath": "booksort5/0", "group": "Thể loại", "isDefaultHome": false },
+    { "name": "Khoa Huyễn Tiểu Thuyết", "urlOrPath": "booksort6/0", "group": "Thể loại", "isDefaultHome": false },
+    { "name": "Khủng Bố Linh Dị", "urlOrPath": "booksort7/0", "group": "Thể loại", "isDefaultHome": false },
+    { "name": "Đồng Nhân", "urlOrPath": "booksort8/0", "group": "Thể loại", "isDefaultHome": false },
+    { "name": "Thể Loại Khác", "urlOrPath": "booksort9/0", "group": "Thể loại", "isDefaultHome": false }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "plugin_fanqie_cn",
+  "name": "Cà Chua (Fanqie)",
+  "version": "3.0.0",
+  "author": "Cộng đồng Truyện TTS",
+  "description": "Nguồn truyện Cà Chua Fanqie (fanqienovel.com) chạy 100% bằng cấu hình JSON API khai báo độc lập, đầy đủ 14 danh mục Nam Tần, Nữ Tần, Bảng xếp hạng và tự dịch VietPhrase/AI.",
+  "language": "zh",
+  "baseUrl": "https://fanqienovel.com",
+  "mirrorUrls": [],
+  "driverType": "configurable_css",
+  "charset": "UTF-8",
+  "searchMethod": "GET",
+  "requestDelayMs": 200,
+  "chapterPageSize": 100,
+  "defaultCategory": "Đô Thị (Nam)",
+  "enabled": true,
+  "authConfig": {
+    "supportsLogin": true,
+    "loginUrl": "https://fanqienovel.com/",
+    "loginHint": "Đăng nhập tài khoản Fanqie (Cà Chua) của bạn nếu cần mở khóa chương hoặc đồng bộ phiên.",
+    "authCookieKeys": ["sessionid", "ttwid", "passport_csrf_token"],
+    "lockedChapterMarkers": ["请登录", "番茄小说APP"],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPageUrlTemplate": "{baseUrl}/{categoryPath}",
+    "listPaginationSupported": true,
+    "searchUrlTemplate": "{baseUrl}/api/author/search/search_book/v1?filter=127,127,127,127&page_count=20&page_index={pageZero}&query_type=0&query_word={query}",
+    "bookIdExtractRegex": "/page/(\\d+)",
+    "listApiConfig": {
+      "mode": "json_api",
+      "itemsJsonPath": "data.book_list",
+      "idField": "book_id",
+      "titleField": "book_name",
+      "authorField": "author",
+      "coverField": "thumb_url",
+      "descField": "abstract",
+      "itemUrlTemplate": "{baseUrl}/page/{id}",
+      "pageZeroIndexed": true,
+      "stripRegex": "[\\uE000-\\uF8FF]"
+    },
+    "searchApiConfig": {
+      "mode": "json_api",
+      "endpointTemplate": "{baseUrl}/api/author/search/search_book/v1?filter=127,127,127,127&page_count=20&page_index={pageZero}&query_type=0&query_word={query}",
+      "itemsJsonPath": "data.ret_data",
+      "idField": "book_id",
+      "titleField": "title",
+      "authorField": "author",
+      "coverField": "thumb_url",
+      "descField": "abstract",
+      "itemUrlTemplate": "{baseUrl}/page/{id}",
+      "pageZeroIndexed": true,
+      "stripRegex": "[\\uE000-\\uF8FF]"
+    },
+    "chapterApiConfig": {
+      "mode": "json_api_nested",
+      "endpointTemplate": "{baseUrl}/api/reader/directory/detail?bookId={bookId}",
+      "itemsJsonPath": "data.chapterListWithVolume",
+      "nestedArray": true,
+      "idField": "itemId",
+      "titleField": "title",
+      "itemUrlTemplate": "{baseUrl}/reader/{id}",
+      "idExtractRegex": "/page/(\\d+)"
+    },
+    "contentApiConfig": {
+      "mode": "json_api_post",
+      "endpointTemplate": "http://219.154.201.122:5006/content?item_id={chapterId}&source=%E7%95%AA%E8%8C%84&tab=%E5%B0%8F%E8%AF%B4&tone_id=%E9%BB%98%E8%AE%A4%E9%9F%B3%E8%89%B2&version=4.6.29",
+      "idExtractRegex": "(\\d+)/?$",
+      "titleField": "title",
+      "contentField": "content",
+      "decodeZeroWidthCipher": true
+    }
+  },
+  "cleanRules": [
+    { "pattern": "本书源属于大灰狼独有公益书源.*?（企鹅：\\d+）", "replacement": "", "isRegex": true, "ignoreCase": false },
+    { "pattern": "本书源属于.*?书源防失联：[^\\s]+", "replacement": "", "isRegex": true, "ignoreCase": false },
+    { "pattern": "提供免费阅读服务.*?企鹅：\\d+）", "replacement": "", "isRegex": true, "ignoreCase": false },
+    { "pattern": "发现有倒狗盗用本接口.*?谨防上当受骗", "replacement": "", "isRegex": true, "ignoreCase": false },
+    { "pattern": "书源防失联：https://[^\\s]+.*?企鹅：\\d+）", "replacement": "", "isRegex": true, "ignoreCase": false },
+    { "pattern": "[\\u200B-\\u200F\\u202A-\\u202E\\u2060-\\u206F\\uFEFF]", "replacement": "", "isRegex": true, "ignoreCase": false },
+    { "pattern": "本书[\\s\\S]*?（qq：.*?）\\s*", "replacement": "", "isRegex": true, "ignoreCase": true }
+  ],
+  "categories": [
+    { "name": "Đô Thị (Nam)", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=8&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": true },
+    { "name": "Huyền Huyễn (Nam)", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=1&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": false },
+    { "name": "Tu Chân Tiên Hiệp", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=2&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": false },
+    { "name": "Khoa Huyễn Mạt Thế", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=7&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": false },
+    { "name": "Lịch Sử Cổ Đại", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=272&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": false },
+    { "name": "Đồng Nhân Nhị Thứ Nguyên", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=256&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": false },
+    { "name": "Võng Du Cạnh Kỹ", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=9&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": false },
+    { "name": "Cao Võ Dị Năng", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=1014&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": false },
+    { "name": "Huyền Nghi Linh Dị", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=10&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nam Tần", "isDefaultHome": false },
+    { "name": "Đề Cử Cực Hot", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=262&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Bảng xếp hạng", "isDefaultHome": false },
+    { "name": "Bảng Đọc Nhiều", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=1&category_id=257&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Bảng xếp hạng", "isDefaultHome": false },
+    { "name": "Ngôn Tình (Nữ)", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=0&category_id=3&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nữ Tần", "isDefaultHome": false },
+    { "name": "Cổ Ngôn Não Động", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=0&category_id=253&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nữ Tần", "isDefaultHome": false },
+    { "name": "Hiện Ngôn Não Động", "urlOrPath": "api/author/library/book_list/v0/?page_count=18&page_index={pageZero}&gender=0&category_id=267&creation_status=-1&word_count=-1&book_type=-1&sort=0", "group": "Nữ Tần", "isDefaultHome": false }
+  ]
+}
