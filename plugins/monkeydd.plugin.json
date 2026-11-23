@@ -1,0 +1,537 @@
+{
+  "id": "plugin_monkeydd",
+  "name": "MonkeyD",
+  "version": "1.0.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện ngôn tình, cổ đại, truyện Zhihu và truyện dịch cập nhật liên tục trên MonkeyD. Không cần đăng nhập.",
+  "language": "vi",
+  "baseUrl": "https://www.monkeydd.com",
+  "mirrorUrls": [
+    "https://monkeydd.com"
+  ],
+  "driverType": "configurable_css",
+  "charset": "UTF-8",
+  "convertTraditionalToSimplified": false,
+  "searchMethod": "GET",
+  "requestDelayMs": 300,
+  "customHeaders": {
+    "Cookie": "affDisplayInChapter=true; affShopeeFoodClicked=true"
+  },
+  "chapterPageSize": 50,
+  "defaultCategory": "Truyện mới",
+  "enabled": true,
+  "authConfig": {
+    "supportsLogin": false,
+    "loginUrl": "",
+    "loginHint": "",
+    "authCookieKeys": [],
+    "lockedChapterMarkers": [],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}{categoryPath}",
+    "listPageUrlTemplate": "{baseUrl}{categoryPath}?page={page}",
+    "listPaginationSupported": true,
+    "searchUrlTemplate": "{baseUrl}/tim-kiem?search={query}",
+    "chapterPageUrlTemplate": "",
+    "listItemSelector": ".single-story-block",
+    "listTitleSelector": ".single-story-details h3 a",
+    "listAuthorSelector": "",
+    "listCoverSelector": ".single-story-img img",
+    "listLatestChapterSelector": ".single-story-details .chapter-name, .episode-title a",
+    "detailTitleSelector": ".page-comics-detail h2.card-title",
+    "detailAuthorSelector": ".page-comics-detail dl a[href*='/nhom-dich/'] b",
+    "detailCoverSelector": ".page-comics-detail .col-md-3 img.img-fluid",
+    "detailDescriptionSelector": ".story-description .inner",
+    "detailStatusSelector": ".page-comics-detail dl dd:last-of-type",
+    "detailGenreSelector": ".page-comics-detail a.cate-item",
+    "detailChapterListUrlSelector": "",
+    "chapterListSelector": "#listChapters .list-chapters .episode-title a",
+    "chapterListStartAfterText": "",
+    "chapterListExcludeSelector": "",
+    "chapterListReverse": true,
+    "chapterTitleSelector": "#chapterContentLoading h1.card-title",
+    "chapterContentSelector": "#chapter-content-render .actac",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": ".actcl, #spf-img, .signature, .my-4, #affGateModal, script, style, input",
+    "prevChapterSelector": "",
+    "nextChapterSelector": "",
+    "blockedUrlPatterns": [
+      "s.shopee.vn",
+      "s.lazada.vn",
+      "vt.tiktok.com",
+      "monkeydtruyen.cc"
+    ],
+    "invalidCoverPatterns": [
+      "ajax-loading.gif",
+      "no-image.png",
+      "Logo-MonkeyD.png",
+      "unlock-ytb-link.png",
+      "click-here-to-unlock.jpg"
+    ],
+    "coverUrlReplacements": [],
+    "coverFallbackTemplate": "",
+    "preferDetailHdCover": false,
+    "bookIdExtractRegex": "/([^/]+)\\.html$"
+  },
+  "cleanRules": [
+    {
+      "pattern": "\\[Truyện được đăng tải duy nhất tại[^\\]]*\\]",
+      "replacement": "",
+      "isRegex": true,
+      "ignoreCase": true
+    },
+    {
+      "pattern": "(?i)(?:https?://)?(?:www\\.)?monkeydd\\.com[^\\s]*",
+      "replacement": "",
+      "isRegex": true,
+      "ignoreCase": true
+    },
+    {
+      "pattern": "(?<=\\p{L})/(?=\\p{L})",
+      "replacement": "",
+      "isRegex": true,
+      "ignoreCase": false
+    }
+  ],
+  "categories": [
+    {
+      "name": "Truyện mới",
+      "urlOrPath": "/truyen-moi.html",
+      "group": "Danh sách",
+      "isDefaultHome": true
+    },
+    {
+      "name": "Truyện Full",
+      "urlOrPath": "/truyen-hoan-thanh.html",
+      "group": "Danh sách",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Truyện Sáng Tác",
+      "urlOrPath": "/truyen-sang-tac.html",
+      "group": "Danh sách",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Bách Hợp",
+      "urlOrPath": "/the-loai/bach-hop.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Báo Thù",
+      "urlOrPath": "/the-loai/bao-thu.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "BE",
+      "urlOrPath": "/the-loai/be.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Bình Luận Cốt Truyện",
+      "urlOrPath": "/the-loai/binh-luan-cot-truyen.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Chữa Lành",
+      "urlOrPath": "/the-loai/chua-lanh.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Cổ Đại",
+      "urlOrPath": "/the-loai/co-dai.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Cung Đấu",
+      "urlOrPath": "/the-loai/cung-dau.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Cưới Trước Yêu Sau",
+      "urlOrPath": "/the-loai/cuoi-truoc-yeu-sau.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Cường Thủ Hào Đoạt",
+      "urlOrPath": "/the-loai/cuong-thu-hao-doat.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Dị Năng",
+      "urlOrPath": "/the-loai/di-nang.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Dưỡng Thê",
+      "urlOrPath": "/the-loai/duong-the.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Đam Mỹ",
+      "urlOrPath": "/the-loai/dam-my.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Điền Văn",
+      "urlOrPath": "/the-loai/dien-van.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Đô Thị",
+      "urlOrPath": "/the-loai/do-thi.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Đoản Văn",
+      "urlOrPath": "/the-loai/doan-van.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Đọc Tâm",
+      "urlOrPath": "/the-loai/doc-tam.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Gả Thay",
+      "urlOrPath": "/the-loai/ga-thay.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Gia Đấu",
+      "urlOrPath": "/the-loai/gia-dau.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Gia Đình",
+      "urlOrPath": "/the-loai/gia-dinh.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Gương Vỡ Không Lành",
+      "urlOrPath": "/the-loai/guong-vo-khong-lanh.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Gương Vỡ Lại Lành",
+      "urlOrPath": "/the-loai/guong-vo-lai-lanh.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Hài Hước",
+      "urlOrPath": "/the-loai/hai-huoc.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Hành Động",
+      "urlOrPath": "/the-loai/hanh-dong.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Hào Môn Thế Gia",
+      "urlOrPath": "/the-loai/hao-mon-the-gia.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "HE",
+      "urlOrPath": "/the-loai/he.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Hệ Thống",
+      "urlOrPath": "/the-loai/he-thong.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Hiện Đại",
+      "urlOrPath": "/the-loai/hien-dai.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Hoán Đổi Thân Xác",
+      "urlOrPath": "/the-loai/hoan-doi-than-xac.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Học Bá",
+      "urlOrPath": "/the-loai/hoc-ba.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Học Đường",
+      "urlOrPath": "/the-loai/hoc-duong.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Hư Cấu Kỳ Ảo",
+      "urlOrPath": "/the-loai/hu-cau-ky-ao.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Huyền Huyễn",
+      "urlOrPath": "/the-loai/huyen-huyen.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Không CP",
+      "urlOrPath": "/the-loai/khong-cp.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Kinh Dị",
+      "urlOrPath": "/the-loai/kinh-di.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Linh Dị",
+      "urlOrPath": "/the-loai/linh-di.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Mạt Thế",
+      "urlOrPath": "/the-loai/mat-the.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Mỹ Thực",
+      "urlOrPath": "/the-loai/my-thuc.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Ngôn Tình",
+      "urlOrPath": "/the-loai/ngon-tinh.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Ngọt",
+      "urlOrPath": "/the-loai/ngot.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Ngược",
+      "urlOrPath": "/the-loai/nguoc.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Ngược Luyến Tàn Tâm",
+      "urlOrPath": "/the-loai/nguoc-luyen-tan-tam.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Ngược Nam",
+      "urlOrPath": "/the-loai/nguoc-nam.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Ngược Nữ",
+      "urlOrPath": "/the-loai/nguoc-nu.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Nhân Thú",
+      "urlOrPath": "/the-loai/nhan-thu.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Niên Đại",
+      "urlOrPath": "/the-loai/nien-dai.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Nữ Cường",
+      "urlOrPath": "/the-loai/nu-cuong.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "OE",
+      "urlOrPath": "/the-loai/oe.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Phép Thuật",
+      "urlOrPath": "/the-loai/phep-thuat.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Phiêu Lưu",
+      "urlOrPath": "/the-loai/phieu-luu.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Phương Đông",
+      "urlOrPath": "/the-loai/phuong-dong.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Phương Tây",
+      "urlOrPath": "/the-loai/phuong-tay.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Quy tắc",
+      "urlOrPath": "/the-loai/quy-tac.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Sảng Văn",
+      "urlOrPath": "/the-loai/sang-van.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "SE",
+      "urlOrPath": "/the-loai/se.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Showbiz",
+      "urlOrPath": "/the-loai/showbiz.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Sủng",
+      "urlOrPath": "/the-loai/sung.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Thanh Xuân Vườn Trường",
+      "urlOrPath": "/the-loai/thanh-xuan-vuon-truong.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Thức Tỉnh Nhân Vật",
+      "urlOrPath": "/the-loai/thuc-tinh-nhan-vat.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Tiên Hiệp",
+      "urlOrPath": "/the-loai/tien-hiep.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Tiểu Thuyết",
+      "urlOrPath": "/the-loai/tieu-thuyet.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Tổng Tài",
+      "urlOrPath": "/the-loai/tong-tai.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Trả Thù",
+      "urlOrPath": "/the-loai/tra-thu.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Trinh thám",
+      "urlOrPath": "/the-loai/trinh-tham.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Trọng Sinh",
+      "urlOrPath": "/the-loai/trong-sinh.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Truy Thê",
+      "urlOrPath": "/the-loai/truy-the.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Truyền Cảm Hứng",
+      "urlOrPath": "/the-loai/truyen-cam-hung.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Vả Mặt",
+      "urlOrPath": "/the-loai/va-mat.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Vô Tri",
+      "urlOrPath": "/the-loai/vo-tri.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Xuyên Không",
+      "urlOrPath": "/the-loai/xuyen-khong.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Xuyên Sách",
+      "urlOrPath": "/the-loai/xuyen-sach.html",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    }
+  ]
+}
