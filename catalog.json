@@ -96,6 +96,6 @@
   "driverType": "configurable_css",
   "enabled": true,
   "file": "plugins/dichtienghoa.plugin.json"
-}
+    }
   ]
 }
