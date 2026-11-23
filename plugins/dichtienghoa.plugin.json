@@ -1,12 +1,14 @@
 {
   "id": "plugin_dichtienghoa",
   "name": "Dịch Tiếng Hoa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Truyện TTS",
   "description": "Kho truyện Trung Quốc dịch tiếng Việt cập nhật liên tục trên Dịch Tiếng Hoa. Hỗ trợ đăng nhập tài khoản để đọc chương VIP/thành viên.",
   "language": "vi",
-  "baseUrl": "https://dichtienghoa.net",
-  "mirrorUrls": [],
+  "baseUrl": "https://dichtienghoa.app",
+  "mirrorUrls": [
+    "https://dichtienghoa.net"
+  ],
   "driverType": "configurable_css",
   "charset": "UTF-8",
   "convertTraditionalToSimplified": false,
@@ -18,7 +20,7 @@
   "enabled": true,
   "authConfig": {
     "supportsLogin": true,
-    "loginUrl": "https://dichtienghoa.net/",
+    "loginUrl": "https://dichtienghoa.app/",
     "loginHint": "Đăng nhập tài khoản Dịch Tiếng Hoa nếu cần đọc chương VIP và vượt xác minh Cloudflare.",
     "authCookieKeys": [
       "cf_clearance"
@@ -114,7 +116,7 @@
   },
   "cleanRules": [
     {
-      "pattern": "(?i)(?:https?://)?(?:www\\.)?dichtienghoa\\.net",
+      "pattern": "(?i)(?:https?://)?(?:www\\.)?dichtienghoa\\.(?:app|net)",
       "replacement": "",
       "isRegex": true,
       "ignoreCase": true
