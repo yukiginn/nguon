@@ -1,6 +1,6 @@
 {
   "name": "Truyện TTS",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "updatedAt": "2026-11-23",
   "description": "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
   "moviePluginFile": "phimai_sources.plugin.json",
@@ -8,7 +8,7 @@
     {
       "id": "plugin_truyenfull",
       "name": "Truyện Full",
-      "version": "3.1.0",
+      "version": "3.1.1",
       "language": "vi",
       "driverType": "configurable_css",
       "baseUrl": "https://truyenfull.live",

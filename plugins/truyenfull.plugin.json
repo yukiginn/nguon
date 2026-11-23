@@ -1,7 +1,7 @@
 {
   "id": "plugin_truyenfull",
   "name": "Truyện Full",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "author": "Truyện TTS",
   "description": "Kho truyện chữ tiếng Việt miễn phí với 59 thể loại đa dạng. Không cần đăng nhập.",
   "language": "vi",
@@ -49,7 +49,8 @@
     "invalidCoverPatterns": [
       "default.jpg",
       "no-image"
-    ]
+    ],
+    "preferDetailHdCover": true
   },
   "cleanRules": [
     { "pattern": "Truyện Tiên Hiệp Truyện FULL|Truyện FULL|truyenfull\\.(vn|io|vision|live|com)", "replacement": "", "isRegex": true, "ignoreCase": true },
