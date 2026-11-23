@@ -1,0 +1,215 @@
+{
+  "id": "plugin_dichtienghoa",
+  "name": "Dịch Tiếng Hoa",
+  "version": "1.0.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện Trung Quốc dịch tiếng Việt cập nhật liên tục trên Dịch Tiếng Hoa. Hỗ trợ đăng nhập tài khoản để đọc chương VIP/thành viên.",
+  "language": "vi",
+  "baseUrl": "https://dichtienghoa.net",
+  "mirrorUrls": [],
+  "driverType": "configurable_css",
+  "charset": "UTF-8",
+  "convertTraditionalToSimplified": false,
+  "searchMethod": "GET",
+  "requestDelayMs": 300,
+  "customHeaders": {},
+  "chapterPageSize": 300,
+  "defaultCategory": "Mới cập nhật",
+  "enabled": true,
+  "authConfig": {
+    "supportsLogin": true,
+    "loginUrl": "https://dichtienghoa.net/",
+    "loginHint": "Đăng nhập tài khoản Dịch Tiếng Hoa nếu cần đọc chương VIP và vượt xác minh Cloudflare.",
+    "authCookieKeys": [
+      "cf_clearance"
+    ],
+    "lockedChapterMarkers": [
+      "Chương VIP",
+      "Chưa mở khóa"
+    ],
+    "unlockWebUrlTemplate": "{chapterUrl}"
+  },
+  "selectors": {
+    "listUrlTemplate": "{baseUrl}/tim-kiem?{categoryPath}",
+    "listPageUrlTemplate": "{baseUrl}/tim-kiem?{categoryPath}&page={page}",
+    "listPaginationSupported": true,
+    "searchUrlTemplate": "{baseUrl}/tim-kiem?q={query}&sort=updatedAt:desc",
+    "chapterPageUrlTemplate": "{baseUrl}/truyen/{bookId}?page={page}",
+    "listItemSelector": "a[href^='/truyen/']",
+    "listTitleSelector": "h3, h2, .title",
+    "listAuthorSelector": ".author",
+    "listCoverSelector": "img",
+    "listLatestChapterSelector": ".chapter",
+    "detailTitleSelector": "h1",
+    "detailAuthorSelector": "a[href*='author=']",
+    "detailCoverSelector": "main img",
+    "detailDescriptionSelector": ".description, p",
+    "detailStatusSelector": ".status",
+    "detailGenreSelector": "a[href*='category=']",
+    "detailChapterListUrlSelector": "",
+    "chapterListSelector": "a[href^='/truyen/'][href*='/']",
+    "chapterListStartAfterText": "Danh sách chương",
+    "chapterListExcludeSelector": "nav a, header a, footer a",
+    "chapterListReverse": false,
+    "chapterTitleSelector": "h1, h2",
+    "chapterContentSelector": ".chapter-content, article, main",
+    "chapterNextPageSelector": "",
+    "removeElementsSelector": "script, style, nav, header, footer",
+    "prevChapterSelector": "",
+    "nextChapterSelector": "",
+    "blockedUrlPatterns": [
+      "/cdn-cgi/",
+      "cloudflare"
+    ],
+    "invalidCoverPatterns": [
+      "avatar-",
+      "no-cover",
+      "placeholder",
+      "logo",
+      "favicon"
+    ],
+    "coverUrlReplacements": [],
+    "coverFallbackTemplate": "",
+    "preferDetailHdCover": false,
+    "bookIdExtractRegex": "/truyen/(\\d+)",
+    "listApiConfig": {
+      "mode": "json_api",
+      "endpointTemplate": "{baseUrl}/api/models/story?{categoryPath}&fast=1&page={page}&pageSize=48",
+      "itemsJsonPath": "data",
+      "idField": "id",
+      "titleField": "title",
+      "authorField": "author.name",
+      "coverField": "imgUrl",
+      "descField": "description",
+      "itemUrlTemplate": "{baseUrl}/truyen/{id}",
+      "pageSize": 48
+    },
+    "searchApiConfig": {
+      "mode": "json_api",
+      "endpointTemplate": "{baseUrl}/api/models/story?q={query}&sort=updatedAt:desc&fast=1&page={page}&pageSize=48",
+      "itemsJsonPath": "data",
+      "idField": "id",
+      "titleField": "title",
+      "authorField": "author.name",
+      "coverField": "imgUrl",
+      "descField": "description",
+      "itemUrlTemplate": "{baseUrl}/truyen/{id}",
+      "pageSize": 48
+    },
+    "chapterApiConfig": {
+      "mode": "json_api",
+      "endpointTemplate": "{baseUrl}/api/models/chapter?storyId={bookId}&page={page}&limit=300&order=asc",
+      "itemsJsonPath": "chapters",
+      "idField": "id",
+      "titleField": "title",
+      "itemUrlTemplate": "{baseUrl}/truyen/{bookId}/{id}",
+      "pageSize": 300
+    },
+    "contentApiConfig": {
+      "mode": "json_api",
+      "endpointTemplate": "{baseUrl}/api/models/chapter/{chapterId}",
+      "contentField": "translatedContent",
+      "titleField": "title"
+    }
+  },
+  "cleanRules": [
+    {
+      "pattern": "(?i)(?:https?://)?(?:www\\.)?dichtienghoa\\.net",
+      "replacement": "",
+      "isRegex": true,
+      "ignoreCase": true
+    }
+  ],
+  "categories": [
+    {
+      "name": "Mới cập nhật",
+      "urlOrPath": "sort=updatedAt:desc",
+      "group": "Danh sách",
+      "isDefaultHome": true
+    },
+    {
+      "name": "Mới thêm vào",
+      "urlOrPath": "sort=createdAt:desc",
+      "group": "Danh sách",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Truyện hoàn thành",
+      "urlOrPath": "status=completed&sort=updatedAt:desc",
+      "group": "Danh sách",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Đang cập nhật",
+      "urlOrPath": "status=ongoing&sort=updatedAt:desc",
+      "group": "Danh sách",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Tiên hiệp",
+      "urlOrPath": "category=Tiên hiệp&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Huyền huyễn",
+      "urlOrPath": "category=Huyền huyễn&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Đô thị",
+      "urlOrPath": "category=Đô Thị&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Ngôn tình",
+      "urlOrPath": "category=Ngôn tình&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Light novel",
+      "urlOrPath": "category=Light novel&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Đồng nhân",
+      "urlOrPath": "category=Đồng nhân&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Xuyên việt",
+      "urlOrPath": "category=Xuyên việt&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Kỳ huyễn",
+      "urlOrPath": "category=Kỳ huyễn&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Huyền nghi",
+      "urlOrPath": "category=Huyền nghi&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Linh dị",
+      "urlOrPath": "category=Linh dị&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    },
+    {
+      "name": "Võng du",
+      "urlOrPath": "category=Võng du&sort=updatedAt:desc",
+      "group": "Thể loại",
+      "isDefaultHome": false
+    }
+  ]
+}
