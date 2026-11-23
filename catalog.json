@@ -96,6 +96,18 @@
   "driverType": "configurable_css",
   "enabled": true,
   "file": "plugins/dichtienghoa.plugin.json"
+    },
+    {
+  "id": "plugin_monkeydd",
+  "name": "MonkeyD",
+  "version": "1.0.0",
+  "author": "Truyện TTS",
+  "description": "Kho truyện ngôn tình, cổ đại, truyện Zhihu và truyện dịch cập nhật liên tục trên MonkeyD. Không cần đăng nhập.",
+  "language": "vi",
+  "baseUrl": "https://www.monkeydd.com",
+  "driverType": "configurable_css",
+  "enabled": true,
+  "file": "plugins/monkeydd.plugin.json"
     }
   ]
 }
