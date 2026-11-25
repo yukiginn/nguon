@@ -1,113 +1,116 @@
 {
-  "name": "Truyện TTS",
-  "version": "3.1.1",
-  "updatedAt": "2026-11-23",
-  "description": "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
-  "moviePluginFile": "phimai_sources.plugin.json",
-  "plugins": [
-    {
-      "id": "plugin_truyenfull",
-      "name": "Truyện Full",
-      "version": "3.1.1",
-      "language": "vi",
-      "driverType": "configurable_css",
-      "baseUrl": "https://truyenfull.live",
-      "description": "Kho truyện chữ tiếng Việt miễn phí với 59 thể loại đa dạng. Không cần đăng nhập.",
-      "file": "plugins/truyenfull.plugin.json"
-    },
-    {
-      "id": "plugin_metruyenchu",
-      "name": "Mê Truyện Chữ",
-      "version": "3.1.0",
-      "language": "vi",
-      "driverType": "configurable_css",
-      "baseUrl": "https://metruyenchu.com.vn",
-      "description": "Kho truyện chữ tiếng Việt phong phú với 52 thể loại. Không cần đăng nhập.",
-      "file": "plugins/metruyenchu.plugin.json"
-    },
-    {
-      "id": "plugin_dtruyen",
-      "name": "WebTruyen (DTruyen)",
-      "version": "3.1.0",
-      "language": "vi",
-      "driverType": "configurable_css",
-      "baseUrl": "https://wetruyen.com",
-      "description": "Kho truyện ngôn tình, tiên hiệp, kiếm hiệp tiếng Việt với 46 thể loại. Không cần đăng nhập.",
-      "file": "plugins/dtruyen.plugin.json"
-    },
-    {
-      "id": "plugin_wikidich",
-      "name": "Truyện Wiki Dịch",
-      "version": "3.1.0",
-      "language": "vi",
-      "driverType": "configurable_css",
-      "baseUrl": "https://truyenwikidich.net",
-      "description": "Kho truyện dịch tiếng Việt đa dạng. Hỗ trợ đăng nhập tài khoản để đọc chương thành viên.",
-      "file": "plugins/wikidich.plugin.json"
-    },
-    {
-      "id": "plugin_69shuba",
-      "name": "69 Thư Ba (69shuba)",
-      "version": "3.1.0",
-      "language": "zh",
-      "driverType": "configurable_css",
-      "baseUrl": "https://www.69shuba.com",
-      "description": "Kho truyện tiếng Trung cập nhật nhanh, hỗ trợ tự động dịch sang tiếng Việt. Không cần đăng nhập.",
-      "file": "plugins/69shuba.plugin.json"
-    },
-    {
-      "id": "plugin_fanqie_cn",
-      "name": "Cà Chua (Fanqie)",
-      "version": "3.1.0",
-      "language": "zh",
-      "driverType": "configurable_css",
-      "baseUrl": "https://fanqienovel.com",
-      "description": "Kho truyện tiếng Trung Cà Chua nổi tiếng, tự động dịch tiếng Việt. Hỗ trợ đăng nhập tài khoản.",
-      "file": "plugins/fanqie_cn.plugin.json"
-    },
-    {
-      "id": "plugin_biquge_cn",
-      "name": "Bút Thú Các (Biquge)",
-      "version": "3.1.0",
-      "language": "zh",
-      "driverType": "configurable_css",
-      "baseUrl": "https://www.bqg9.xyz",
-      "description": "Kho truyện tiếng Trung tổng hợp hơn 3.000 đầu truyện, tự động dịch tiếng Việt. Không cần đăng nhập.",
-      "file": "plugins/biquge_cn.plugin.json"
-    },
-    {
-      "id": "plugin_piaotia_cn",
-      "name": "Phiêu Thiên Văn Học (Piaotia)",
-      "version": "3.1.0",
-      "language": "zh",
-      "driverType": "configurable_css",
-      "baseUrl": "https://www.piaotia.com",
-      "description": "Kho truyện tiếng Trung lâu đời, đầy đủ bảng xếp hạng và thể loại, tự động dịch tiếng Việt. Không cần đăng nhập.",
-      "file": "plugins/piaotia_cn.plugin.json"
-    },
-    {
-  "id": "plugin_dichtienghoa",
-  "name": "Dịch Tiếng Hoa",
-  "version": "1.0.1",
-  "author": "Truyện TTS",
-  "description": "Kho truyện Trung Quốc dịch tiếng Việt cập nhật liên tục trên Dịch Tiếng Hoa. Hỗ trợ đăng nhập tài khoản để đọc chương VIP/thành viên.",
-  "language": "vi",
-  "baseUrl": "https://dichtienghoa.app",
-  "driverType": "configurable_css",
-  "enabled": true,
-  "file": "plugins/dichtienghoa.plugin.json"
-    },
-    {
-  "id": "plugin_monkeydd",
-  "name": "MonkeyD",
-  "version": "1.0.0",
-  "author": "Truyện TTS",
-  "description": "Kho truyện ngôn tình, cổ đại, truyện Zhihu và truyện dịch cập nhật liên tục trên MonkeyD. Không cần đăng nhập.",
-  "language": "vi",
-  "baseUrl": "https://www.monkeydd.com",
-  "driverType": "configurable_css",
-  "enabled": true,
-  "file": "plugins/monkeydd.plugin.json"
-    }
-  ]
+    "name":  "Truyện TTS",
+    "version":  "3.1.1",
+    "updatedAt":  "2026-11-25",
+    "description":  "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
+    "moviePluginFile":  "phimai_sources.plugin.json",
+    "plugins":  [
+                    {
+                        "id":  "plugin_truyenfull",
+                        "name":  "Truyện Full",
+                        "version":  "3.1.1",
+                        "language":  "vi",
+                        "driverType":  "configurable_css",
+                        "baseUrl":  "https://truyenfull.live",
+                        "description":  "Kho truyện chữ tiếng Việt miễn phí với 59 thể loại đa dạng. Không cần đăng nhập.",
+                        "file":  "plugins/truyenfull.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_metruyenchu",
+                        "name":  "Mê Truyện Chữ",
+                        "version":  "3.1.0",
+                        "language":  "vi",
+                        "driverType":  "configurable_css",
+                        "baseUrl":  "https://metruyenchu.com.vn",
+                        "description":  "Kho truyện chữ tiếng Việt phong phú với 52 thể loại. Không cần đăng nhập.",
+                        "file":  "plugins/metruyenchu.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_dtruyen",
+                        "name":  "WebTruyen (DTruyen)",
+                        "version":  "3.1.0",
+                        "language":  "vi",
+                        "driverType":  "configurable_css",
+                        "baseUrl":  "https://wetruyen.com",
+                        "description":  "Kho truyện ngôn tình, tiên hiệp, kiếm hiệp tiếng Việt với 46 thể loại. Không cần đăng nhập.",
+                        "file":  "plugins/dtruyen.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_wikidich",
+                        "name":  "Truyện Wiki Dịch",
+                        "version":  "3.1.0",
+                        "language":  "vi",
+                        "driverType":  "configurable_css",
+                        "baseUrl":  "https://truyenwikidich.net",
+                        "description":  "Kho truyện dịch tiếng Việt đa dạng. Hỗ trợ đăng nhập tài khoản để đọc chương thành viên.",
+                        "file":  "plugins/wikidich.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_69shuba",
+                        "name":  "69 Thư Ba (69shuba)",
+                        "version":  "3.1.0",
+                        "language":  "zh",
+                        "driverType":  "configurable_css",
+                        "baseUrl":  "https://www.69shuba.com",
+                        "description":  "Kho truyện tiếng Trung cập nhật nhanh, hỗ trợ tự động dịch sang tiếng Việt. Không cần đăng nhập.",
+                        "file":  "plugins/69shuba.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_fanqie_cn",
+                        "name":  "Cà Chua (Fanqie)",
+                        "version":  "3.1.0",
+                        "language":  "zh",
+                        "driverType":  "configurable_css",
+                        "baseUrl":  "https://fanqienovel.com",
+                        "description":  "Kho truyện tiếng Trung Cà Chua nổi tiếng, tự động dịch tiếng Việt. Hỗ trợ đăng nhập tài khoản.",
+                        "file":  "plugins/fanqie_cn.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_biquge_cn",
+                        "name":  "Bút Thú Các (Biquge)",
+                        "version":  "3.1.0",
+                        "language":  "zh",
+                        "driverType":  "configurable_css",
+                        "baseUrl":  "https://www.bqg9.xyz",
+                        "description":  "Kho truyện tiếng Trung tổng hợp hơn 3.000 đầu truyện, tự động dịch tiếng Việt. Không cần đăng nhập.",
+                        "file":  "plugins/biquge_cn.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_piaotia_cn",
+                        "name":  "Phiêu Thiên Văn Học (Piaotia)",
+                        "version":  "3.1.0",
+                        "language":  "zh",
+                        "driverType":  "configurable_css",
+                        "baseUrl":  "https://www.piaotia.com",
+                        "description":  "Kho truyện tiếng Trung lâu đời, đầy đủ bảng xếp hạng và thể loại, tự động dịch tiếng Việt. Không cần đăng nhập.",
+                        "file":  "plugins/piaotia_cn.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_dichtienghoa",
+                        "name":  "Dịch Tiếng Hoa",
+                        "version":  "1.0.1",
+                        "author":  "Truyện TTS",
+                        "description":  "Kho truyện Trung Quốc dịch tiếng Việt cập nhật liên tục trên Dịch Tiếng Hoa. Hỗ trợ đăng nhập tài khoản để đọc chương VIP/thành viên.",
+                        "language":  "vi",
+                        "baseUrl":  "https://dichtienghoa.app",
+                        "driverType":  "configurable_css",
+                        "enabled":  true,
+                        "file":  "plugins/dichtienghoa.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_monkeydd",
+                        "name":  "MonkeyD",
+                        "version":  "1.0.0",
+                        "author":  "Truyện TTS",
+                        "description":  "Kho truyện ngôn tình, cổ đại, truyện Zhihu và truyện dịch cập nhật liên tục trên MonkeyD. Không cần đăng nhập.",
+                        "language":  "vi",
+                        "baseUrl":  "https://www.monkeydd.com",
+                        "driverType":  "configurable_css",
+                        "enabled":  true,
+                        "file":  "plugins/monkeydd.plugin.json"
+                    }
+                ],
+    "videoPluginFile":  "phimai_sources.plugin.json",
+    "cultivationModuleManifest":  "modules/cultivation_manifest.json",
+    "cultivationModuleZip":  "modules/cultivation_module.zip"
 }

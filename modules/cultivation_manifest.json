@@ -1,0 +1,19 @@
+{
+    "moduleType":  "cultivation_world_module",
+    "id":  "module_tuluyen_huyenthien",
+    "name":  "Huyền Thiên Đại Lục",
+    "version":  "1.0.0",
+    "versionCode":  1,
+    "updatedAt":  "2026-11-25",
+    "description":  "Gói Tu Luyện rời tải theo nhu cầu khi người dùng kích hoạt: kết nối Web Game Huyền Thiên Đại Lục, bảng 43 tiểu cảnh giới và đồng bộ Linh Khí khi đọc truyện, nghe TTS, xem Video.",
+    "webPortalUrl":  "https://huyenthiendailuc.ai.studio",
+    "heartbeatApiBaseUrl":  "https://huyenthiendailuc.ai.studio",
+    "firebaseProjectId":  "gen-lang-client-0929443798",
+    "firestoreDatabaseId":  "ai-studio-huynthintingiing-73799735-3403-44c8-b218-031b73fa28b3",
+    "dailyTtsCap":  180,
+    "dailySeclusionCap":  120,
+    "dailyOnlineCap":  60,
+    "packageZipFile":  "modules/cultivation_module.zip",
+    "realmCount":  43,
+    "packageSizeBytes":  2511
+}
