@@ -1,6 +1,6 @@
 {
     "name":  "Truyện TTS",
-    "version":  "3.2.0",
+    "version":  "3.3.0",
     "updatedAt":  "2026-11-26",
     "description":  "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
     "moviePluginFile":  "phimai_sources.plugin.json",
@@ -124,6 +124,32 @@
                         "driverType":  "configurable_css",
                         "enabled":  true,
                         "file":  "plugins/faloo_cn.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_xsw_tw",
+                        "name":  "Đài Loan Tiểu Thuyết (XSW.tw)",
+                        "version":  "1.0.0",
+                        "author":  "Truyện TTS",
+                        "description":  "Kho truyện Phồn thể Đài Loan phong phú từ xsw.tw (bản di động UTF-8 tốc độ cao, không mã hóa), tự động chuyển Giản thể và dịch sang tiếng Việt. Không cần đăng nhập.",
+                        "changelog":  "- Ra mắt nguồn Đài Loan Tiểu Thuyết (xsw.tw) hỗ trợ 13 bảng xếp hạng & thể loại, tìm kiếm, tự động chuyển Phồn→Giản và dịch tiếng Việt.",
+                        "language":  "zh",
+                        "baseUrl":  "https://m.xsw.tw",
+                        "driverType":  "configurable_css",
+                        "enabled":  true,
+                        "file":  "plugins/xsw_tw.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_uukanshu_cc",
+                        "name":  "UU Khán Thư (UUkanshu)",
+                        "version":  "1.0.0",
+                        "author":  "Truyện TTS",
+                        "description":  "Kho truyện Phồn thể miễn phí nổi tiếng từ UU看書 (uukanshu.cc), đầy đủ bảng xếp hạng, 10 thể loại, mục lục trọn bộ và tự động dịch sang tiếng Việt. Không cần đăng nhập.",
+                        "changelog":  "- Ra mắt nguồn UU Khán Thư (uukanshu.cc) với 18 danh mục, ảnh bìa HD, tìm kiếm, tự động chuyển Phồn→Giản và dịch tiếng Việt.",
+                        "language":  "zh",
+                        "baseUrl":  "https://uukanshu.cc",
+                        "driverType":  "configurable_css",
+                        "enabled":  true,
+                        "file":  "plugins/uukanshu_cc.plugin.json"
                     }
                 ],
     "videoPluginFile":  "phimai_sources.plugin.json",
