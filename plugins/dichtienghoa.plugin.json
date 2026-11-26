@@ -1,13 +1,13 @@
 {
   "id": "plugin_dichtienghoa",
   "name": "Dịch Tiếng Hoa",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Truyện TTS",
   "description": "Kho truyện Trung Quốc dịch tiếng Việt cập nhật liên tục trên Dịch Tiếng Hoa. Hỗ trợ đăng nhập tài khoản để đọc chương VIP/thành viên.",
   "language": "vi",
-  "baseUrl": "https://dichtienghoa.app",
+  "baseUrl": "https://dichtienghoa.net",
   "mirrorUrls": [
-    "https://dichtienghoa.net"
+    "https://dichtienghoa.app"
   ],
   "driverType": "configurable_css",
   "charset": "UTF-8",
@@ -15,12 +15,12 @@
   "searchMethod": "GET",
   "requestDelayMs": 300,
   "customHeaders": {},
-  "chapterPageSize": 100,
+  "chapterPageSize": 300,
   "defaultCategory": "Mới cập nhật",
   "enabled": true,
   "authConfig": {
     "supportsLogin": true,
-    "loginUrl": "https://dichtienghoa.app/",
+    "loginUrl": "https://dichtienghoa.net/",
     "loginHint": "Đăng nhập tài khoản Dịch Tiếng Hoa nếu cần đọc chương VIP và vượt xác minh Cloudflare.",
     "authCookieKeys": [
       "cf_clearance"
@@ -40,25 +40,25 @@
     "listItemSelector": "a[href^='/truyen/'], .story-card, article",
     "listTitleSelector": "h3, h2, .title, a[href^='/truyen/']",
     "listAuthorSelector": ".author, a[href*='author=']",
-    "listCoverSelector": "img[data-src], img",
+    "listCoverSelector": "img[data-src], img[src^='http'], img",
     "listLatestChapterSelector": ".chapter, .latest-chapter",
-    "detailTitleSelector": "h1",
-    "detailAuthorSelector": "a[href*='author=']",
-    "detailCoverSelector": "main img, meta[property='og:image']",
-    "detailDescriptionSelector": ".description, main p",
-    "detailStatusSelector": ".status",
-    "detailGenreSelector": "a[href*='category=']",
+    "detailTitleSelector": ".book-container h1.title, .info-box h1.title, h1.title",
+    "detailAuthorSelector": ".info-box p.author, p.author",
+    "detailCoverSelector": "meta[property='og:image'], .image-box img[src^='http']",
+    "detailDescriptionSelector": ".intro .description-content, .description-content",
+    "detailStatusSelector": ".meta-tags .status-tag, .status-tag",
+    "detailGenreSelector": ".meta-tags .genre-tag, .genre-tag",
     "detailChapterListUrlSelector": "",
-    "chapterListSelector": "a[href^='/truyen/'][href*='/']",
-    "chapterListStartAfterText": "Danh sách chương",
+    "chapterListSelector": ".chapter-list .chapter, .chapter-list a[href^='/truyen/']",
+    "chapterListStartAfterText": "",
     "chapterListExcludeSelector": "nav a, header a, footer a",
     "chapterListReverse": false,
-    "chapterTitleSelector": "h1, h2",
-    "chapterContentSelector": ".chapter-content, article, main",
+    "chapterTitleSelector": "header.reader-header h1.chapter-title, h1.chapter-title, .reader-header h1",
+    "chapterContentSelector": ".chapter-content .chapter-body, .chapter-body, main.chapter-content",
     "chapterNextPageSelector": "",
-    "removeElementsSelector": "script, style, nav, header, footer",
-    "prevChapterSelector": "a[rel='prev']",
-    "nextChapterSelector": "a[rel='next']",
+    "removeElementsSelector": "script, style, nav, header, footer, button, .chapter-refresh-action-bar, .nav-top",
+    "prevChapterSelector": "link[rel='prev'], a[rel='prev']",
+    "nextChapterSelector": "link[rel='next'], a[rel='next']",
     "blockedUrlPatterns": [
       "/cdn-cgi/",
       "cloudflare"
@@ -73,7 +73,16 @@
     "coverUrlReplacements": {},
     "coverFallbackTemplate": "",
     "preferDetailHdCover": false,
-    "bookIdExtractRegex": "/truyen/([^/?#]+)"
+    "bookIdExtractRegex": "/truyen/(\\d+)",
+    "chapterApiConfig": {
+      "mode": "nuxt_data_html",
+      "itemsJsonPath": "data.chapters-*.chapters",
+      "idField": "id",
+      "titleField": "title",
+      "itemUrlTemplate": "{baseUrl}/truyen/{bookId}/{id}",
+      "idExtractRegex": "/truyen/(\\d+)",
+      "pageSize": 300
+    }
   },
   "cleanRules": [
     {
@@ -81,6 +90,12 @@
       "replacement": "",
       "isRegex": true,
       "ignoreCase": true
+    },
+    {
+      "pattern": "[ \\t]{2,}",
+      "replacement": " ",
+      "isRegex": true,
+      "ignoreCase": false
     }
   ],
   "categories": [
