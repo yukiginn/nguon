@@ -1,6 +1,6 @@
 {
     "name":  "Truyện TTS",
-    "version":  "3.1.5",
+    "version":  "3.2.0",
     "updatedAt":  "2026-11-26",
     "description":  "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
     "moviePluginFile":  "phimai_sources.plugin.json",
@@ -111,6 +111,19 @@
                         "driverType":  "configurable_css",
                         "enabled":  true,
                         "file":  "plugins/monkeydd.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_faloo_cn",
+                        "name":  "Phi Lô (Faloo)",
+                        "version":  "1.0.0",
+                        "author":  "Truyện TTS",
+                        "description":  "Kho truyện đồng nhân, huyền huyễn, đô thị, nhị thứ nguyên nổi tiếng từ Phi Lô (b.faloo.com), hỗ trợ tự động dịch sang tiếng Việt. Đọc trực tiếp các chương miễn phí; chương VIP cần tài khoản Phi Lô.",
+                        "changelog":  "- Ra mắt nguồn Phi Lô (b.faloo.com) đầy đủ bảng xếp hạng, kho truyện miễn phí, 11 thể loại chính, tìm kiếm và tự động dịch tiếng Việt.\n- Hỗ trợ nhận diện chương VIP và làm sạch quảng cáo trong nội dung chương.",
+                        "language":  "zh",
+                        "baseUrl":  "https://b.faloo.com",
+                        "driverType":  "configurable_css",
+                        "enabled":  true,
+                        "file":  "plugins/faloo_cn.plugin.json"
                     }
                 ],
     "videoPluginFile":  "phimai_sources.plugin.json",
