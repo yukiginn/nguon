@@ -1,6 +1,6 @@
 {
     "name":  "Truyện TTS",
-    "version":  "3.1.4",
+    "version":  "3.1.5",
     "updatedAt":  "2026-11-26",
     "description":  "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
     "moviePluginFile":  "phimai_sources.plugin.json",
@@ -38,11 +38,12 @@
                     {
                         "id":  "plugin_wikidich",
                         "name":  "Truyện Wiki Dịch",
-                        "version":  "3.1.0",
+                        "version":  "3.1.1",
                         "language":  "vi",
                         "driverType":  "configurable_css",
                         "baseUrl":  "https://truyenwikidich.net",
                         "description":  "Kho truyện dịch tiếng Việt đa dạng. Hỗ trợ đăng nhập tài khoản để đọc chương thành viên.",
+                        "changelog":  "- Bổ sung cảnh báo giới hạn tải an toàn để tránh bị chặn IP khi tải nhiều chương.",
                         "file":  "plugins/wikidich.plugin.json"
                     },
                     {
@@ -58,11 +59,12 @@
                     {
                         "id":  "plugin_fanqie_cn",
                         "name":  "Cà Chua (Fanqie)",
-                        "version":  "3.1.0",
+                        "version":  "3.1.1",
                         "language":  "zh",
                         "driverType":  "configurable_css",
                         "baseUrl":  "https://fanqienovel.com",
                         "description":  "Kho truyện tiếng Trung Cà Chua nổi tiếng, tự động dịch tiếng Việt. Hỗ trợ đăng nhập tài khoản.",
+                        "changelog":  "- Bổ sung cảnh báo giới hạn tải an toàn để tránh bị giới hạn IP.",
                         "file":  "plugins/fanqie_cn.plugin.json"
                     },
                     {
@@ -88,9 +90,10 @@
                     {
                         "id":  "plugin_dichtienghoa",
                         "name":  "Dịch Tiếng Hoa",
-                        "version":  "1.0.5",
+                        "version":  "1.0.6",
                         "author":  "Truyện TTS",
                         "description":  "Kho truyện Trung Quốc dịch tiếng Việt cập nhật liên tục trên Dịch Tiếng Hoa. Hỗ trợ đăng nhập tài khoản để đọc chương VIP/thành viên.",
+                        "changelog":  "- Sửa hiển thị tên truyện, tác giả, ảnh bìa HD, thông tin chi tiết và toàn bộ danh sách chương.\n- Đánh dấu sẵn các chương VIP chưa mở khóa.",
                         "language":  "vi",
                         "baseUrl":  "https://dichtienghoa.app",
                         "driverType":  "configurable_css",

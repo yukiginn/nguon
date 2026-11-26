@@ -1,9 +1,11 @@
 {
   "id": "plugin_fanqie_cn",
   "name": "Cà Chua (Fanqie)",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "author": "Truyện TTS",
   "description": "Kho truyện tiếng Trung Cà Chua nổi tiếng, tự động dịch tiếng Việt. Hỗ trợ đăng nhập tài khoản.",
+  "changelog": "- Bổ sung cảnh báo giới hạn tải an toàn để tránh bị giới hạn IP.",
+  "downloadWarning": "Nguồn Cà Chua (Fanqie) kiểm soát rất chặt việc tải hàng loạt và có thể tạm chặn IP nếu tải quá nhanh. Khuyên chỉ tải từng đợt ngắn (25–50 chương).",
   "language": "zh",
   "baseUrl": "https://fanqienovel.com",
   "mirrorUrls": [],

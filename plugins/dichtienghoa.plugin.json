@@ -1,9 +1,11 @@
 {
   "id": "plugin_dichtienghoa",
   "name": "Dịch Tiếng Hoa",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Truyện TTS",
   "description": "Kho truyện Trung Quốc dịch tiếng Việt cập nhật liên tục trên Dịch Tiếng Hoa. Hỗ trợ đăng nhập tài khoản để đọc chương VIP/thành viên.",
+  "changelog": "- Sửa hiển thị tên truyện, tác giả, ảnh bìa HD, thông tin chi tiết và toàn bộ danh sách chương.\n- Đánh dấu sẵn các chương VIP chưa mở khóa.",
+  "downloadWarning": "Nguồn Dịch Tiếng Hoa có giới hạn tốc độ tải và có chương VIP. Tải quá nhanh hoặc quá nhiều chương cùng lúc có thể bị tạm chặn IP. Khuyên tải từng đợt 50–100 chương.",
   "language": "vi",
   "baseUrl": "https://dichtienghoa.app",
   "mirrorUrls": [

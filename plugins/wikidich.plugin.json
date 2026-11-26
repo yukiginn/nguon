@@ -1,9 +1,11 @@
 {
   "id": "plugin_wikidich",
   "name": "Truyện Wiki Dịch",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "author": "Truyện TTS",
   "description": "Kho truyện dịch tiếng Việt đa dạng. Hỗ trợ đăng nhập tài khoản để đọc chương thành viên.",
+  "changelog": "- Bổ sung cảnh báo giới hạn tải an toàn để tránh bị chặn IP khi tải nhiều chương.",
+  "downloadWarning": "Nguồn Wiki Dịch hạn chế tốc độ tải hàng loạt. Tải quá nhanh có thể khiến trang nguồn tạm chặn IP của bạn. Khuyên tải từng đợt vừa phải (50–100 chương).",
   "language": "vi",
   "baseUrl": "https://truyenwikidich.net",
   "mirrorUrls": [
