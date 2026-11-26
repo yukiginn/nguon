@@ -1,6 +1,6 @@
 {
     "name":  "Truyện TTS",
-    "version":  "3.1.2",
+    "version":  "3.1.3",
     "updatedAt":  "2026-11-26",
     "description":  "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
     "moviePluginFile":  "phimai_sources.plugin.json",
@@ -88,7 +88,7 @@
                     {
                         "id":  "plugin_dichtienghoa",
                         "name":  "Dịch Tiếng Hoa",
-                        "version":  "1.0.3",
+                        "version":  "1.0.4",
                         "author":  "Truyện TTS",
                         "description":  "Kho truyện Trung Quốc dịch tiếng Việt cập nhật liên tục trên Dịch Tiếng Hoa. Hỗ trợ đăng nhập tài khoản để đọc chương VIP/thành viên.",
                         "language":  "vi",
