@@ -1,7 +1,7 @@
 {
     "name":  "Truyện TTS",
-    "version":  "3.3.0",
-    "updatedAt":  "2026-11-26",
+    "version":  "3.4.0",
+    "updatedAt":  "2026-11-27",
     "description":  "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
     "moviePluginFile":  "phimai_sources.plugin.json",
     "plugins":  [
@@ -150,6 +150,19 @@
                         "driverType":  "configurable_css",
                         "enabled":  true,
                         "file":  "plugins/uukanshu_cc.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_truyennet",
+                        "name":  "TruyenNet",
+                        "version":  "1.0.0",
+                        "author":  "Truyện TTS",
+                        "description":  "Kho truyện dịch tiếng Việt miễn phí đa dạng thể loại (tiên hiệp, huyền huyễn, ngôn tình, đam mỹ, đô thị...) từ truyennet.org. Hỗ trợ phân trang mục lục tự động, không cần đăng nhập.",
+                        "changelog":  "- Ra mắt nguồn TruyenNet (truyennet.org) đầy đủ 48 danh sách & thể loại, tìm kiếm, phân trang mục lục AJAX 100 chương/trang và đọc chương mượt mà.",
+                        "language":  "vi",
+                        "baseUrl":  "https://truyennet.org",
+                        "driverType":  "configurable_css",
+                        "enabled":  true,
+                        "file":  "plugins/truyennet.plugin.json"
                     }
                 ],
     "videoPluginFile":  "phimai_sources.plugin.json",
