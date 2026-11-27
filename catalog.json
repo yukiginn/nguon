@@ -1,6 +1,6 @@
 {
     "name":  "Truyện TTS",
-    "version":  "3.4.0",
+    "version":  "3.5.0",
     "updatedAt":  "2026-11-27",
     "description":  "Kho nguồn truyện tiếng Việt và tiếng Trung tự động dịch sang tiếng Việt.",
     "moviePluginFile":  "phimai_sources.plugin.json",
@@ -163,6 +163,19 @@
                         "driverType":  "configurable_css",
                         "enabled":  true,
                         "file":  "plugins/truyennet.plugin.json"
+                    },
+                    {
+                        "id":  "plugin_txt520_cn",
+                        "name":  "TXT520 (txt520.com)",
+                        "version":  "1.0.0",
+                        "author":  "Truyện TTS",
+                        "description":  "Kho truyện tiếng Trung bản text siêu nhẹ từ txt520.com (không ảnh bìa, tải rất nhanh, miễn phí 100%), đầy đủ 21 bảng xếp hạng & thể loại, tự động chuyển Phồn→Giản và dịch sang tiếng Việt. Không cần đăng nhập.",
+                        "changelog":  "- Ra mắt nguồn TXT520 (txt520.com) với 21 danh mục & thể loại, tìm kiếm, mục lục trọn bộ và tự động dịch tiếng Việt.",
+                        "language":  "zh",
+                        "baseUrl":  "https://www.txt520.com",
+                        "driverType":  "configurable_css",
+                        "enabled":  true,
+                        "file":  "plugins/txt520_cn.plugin.json"
                     }
                 ],
     "videoPluginFile":  "phimai_sources.plugin.json",
